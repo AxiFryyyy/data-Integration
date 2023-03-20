@@ -48,14 +48,18 @@ public class SSUserDaoImpl implements SSUserDao{
     public SSUser findOne(String user, String pwd) {
         SSUser user_t = null;
         connect = new ConnectToSS().getConnection();
-        String sql = "select name,pwd from account_t";
+        String sql = "select name, pwd, auth from account_t";
         try {
             ps = connect.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
-                user_t = new SSUser();
-                user_t.setName(rs.getString("name"));
-                user_t.setPwd(rs.getString("pwd"));
+                if(rs.getString("name").equals(user) && rs.getString("pwd").equals(pwd)) {
+                    user_t = new SSUser();
+                    user_t.setName(rs.getString("name"));
+                    user_t.setPwd(rs.getString("pwd"));
+                    user_t.setAuth(rs.getString("auth"));
+                    break;
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();

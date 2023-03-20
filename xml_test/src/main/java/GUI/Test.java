@@ -8,11 +8,24 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Test {
+public class Test extends JFrame{
+    {
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
     public static void main(String[] args) {
         JFrame jf = new JFrame("登陆界面");
         //设置框架的宽度和高度
-        jf.setSize(350,200);
+        jf.setSize(400,300);
+        jf.setLocation(600, 300);
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //创建面板，类似于HTML的div标签
         JPanel panel = new JPanel();
@@ -28,23 +41,23 @@ public class Test {
         panel.setLayout(null);
         //创建JLabel
         JLabel userlabel = new JLabel("账号:");
-        userlabel.setBounds(10,20,80,25);
+        userlabel.setBounds(60,45,100,40);
         panel.add(userlabel);
         //创建文本域用于用户输入
         JTextField userText = new JTextField(20);
-        userText.setBounds(100,20,165,25);
+        userText.setBounds(115,50,200,30);
         panel.add(userText);
         //输入密码的文本域
         JLabel passwordLabel = new JLabel("密码:");
-        passwordLabel.setBounds(10,50,80,25);
+        passwordLabel.setBounds(60,115,100,40);
         panel.add(passwordLabel);
         //密码框--未用真正密码框实现
         JTextField passwordText = new JTextField(20);
-        passwordText.setBounds(100,50,165,25);
+        passwordText.setBounds(115,120,200,30);
         panel.add(passwordText);
         //创建登录按钮
         JButton loginButton = new JButton("登录");
-        loginButton.setBounds(10,80,80,25);
+        loginButton.setBounds(160,190,80,25);
         panel.add(loginButton);
 
         loginButton.addActionListener(new ActionListener() {
@@ -56,7 +69,7 @@ public class Test {
                 System.out.println(user_pwd);
                 SSUserDaoImpl ud = new SSUserDaoImpl();
                 SSUser user = ud.findOne(user_name, user_pwd);
-                if (user.getName().equals(user_name) && user.getPwd().equals(user_pwd)) {
+                if (user!=null && user.getAuth().equals("1   ")) {
                     new Login();
                 } else {
                     //登录失败这里会弹出来一个报错的小对话框

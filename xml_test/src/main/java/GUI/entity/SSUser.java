@@ -9,7 +9,6 @@ public class SSUser {
         this.name = name;
         this.pwd = pwd;
         this.auth = auth;
-
     }
     public String getName() {
         return name;
