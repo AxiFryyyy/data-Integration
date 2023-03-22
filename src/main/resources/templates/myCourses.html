@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>我的課程</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="/Course.js"></script>
+</head>
+<body>
+<div>
+    <a href = "/Home" class="btn btn-primary">返回</a>
+
+</div>
+<table>
+    <thead>
+    <tr>
+        <th>課程ID</th>
+        <th>課程名</th>
+        <th>學時</th>
+        <th>學分</th>
+        <th>老師</th>
+        <th>上課地點</th>
+        <th>成績</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="course : ${coursechose}">
+        <td th:text="${course.course_id}"></td>
+        <td th:text="${course.course_name}"></td>
+        <td th:text="${course.course_hours}"></td>
+        <td th:text="${course.credit}"></td>
+        <td th:text="${course.teacher}"></td>
+        <td th:text="${course.location}"></td>
+        <td th:text="${course.result}"></td>
+        <td>
+            <button type="button" class="btn btn-danger" th:data-course-id="${course.course_id}" onclick="showConfirmationDialog(this.getAttribute('data-course-id'))">Delete</button>
+            <form th:id="'delete-form-'+ ${course.course_id}" th:action="@{/myCourses/delete/${course.course_id}}" method="post">
+                <input type="hidden" name="_method" value="DELETE"/>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
