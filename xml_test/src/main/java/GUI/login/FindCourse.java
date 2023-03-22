@@ -1,7 +1,7 @@
 package GUI.login;
 
-import GUI.dao.SSStudentDaoImpl;
-import GUI.entity.SSStudent;
+import GUI.dao.SSCourseDaoImpl;
+import GUI.entity.SSCourse;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,14 +12,18 @@ public class FindCourse extends JPanel implements ActionListener {
     JLabel Inputlabel;
     JTextField Inputtext;
     JButton Findbt;
-    JLabel Snolabel;
-    JLabel Sexlabel;
-    JLabel Namelabel;
-    JLabel Instlabel;
-    JTextField Snotext;
-    JTextField Nametext;
-    JTextField Insttext;
-    JTextField Sextext;
+    JLabel Cnolabel;
+    JLabel Cnamelabel;
+    JLabel Schlabel;
+    JLabel Tchlabel;
+    JLabel Utclabel;
+    JLabel Sharelabel;
+    JTextField Cnotext;
+    JTextField Cnametext;
+    JTextField Schtext;
+    JTextField Tchtext;
+    JTextField Utctext;
+    JTextField Sharetext;
 
     public FindCourse() {
         this.setSize(650,350);
@@ -27,48 +31,67 @@ public class FindCourse extends JPanel implements ActionListener {
         this.setLayout(null);
         this.setBackground(Color.lightGray);
 
-        Snolabel =new JLabel("学号");
-        Snolabel.setSize(100,30);
-        Snolabel.setLocation(100, 120);
-        this.add(Snolabel);
+        Cnolabel =new JLabel("课程号");
+        Cnolabel.setSize(100,30);
+        Cnolabel.setLocation(100, 90);
+        this.add(Cnolabel);
 
-        Snotext =new JTextField();
-        Snotext.setSize(120,30);
-        Snotext.setLocation(220, 120);
-        this.add(Snotext);
+        Cnotext =new JTextField();
+        Cnotext.setSize(120,30);
+        Cnotext.setLocation(220, 90);
+        this.add(Cnotext);
 
-        Namelabel =new JLabel("姓名");
-        Namelabel.setSize(100,30);
-        Namelabel.setLocation(100, 160);
-        this.add(Namelabel);
+        Cnamelabel =new JLabel("课程名");
+        Cnamelabel.setSize(100,30);
+        Cnamelabel.setLocation(100, 130);
+        this.add(Cnamelabel);
 
-        Nametext =new JTextField();
-        Nametext.setSize(120,30);
-        Nametext.setLocation(220, 160);
-        this.add(Nametext);
+        Cnametext =new JTextField();
+        Cnametext.setSize(120,30);
+        Cnametext.setLocation(220, 130);
+        this.add(Cnametext);
 
-        Sexlabel =new JLabel("性别");
-        Sexlabel.setSize(100,30);
-        Sexlabel.setLocation(100, 200);
-        this.add(Sexlabel);
+        Schlabel =new JLabel("学分");
+        Schlabel.setSize(100,30);
+        Schlabel.setLocation(100, 170);
+        this.add(Schlabel);
 
-        Sextext =new JTextField();
-        Sextext.setSize(120, 30);
-        Sextext.setLocation(220, 200);
-        this.add(Sextext);
+        Schtext =new JTextField();
+        Schtext.setSize(120, 30);
+        Schtext.setLocation(220, 170);
+        this.add(Schtext);
 
-        Instlabel =new JLabel("院系");
-        Instlabel.setSize(100,30);
-        Instlabel.setLocation(100, 240);
-        this.add(Instlabel);
+        Tchlabel =new JLabel("授课教师");
+        Tchlabel.setSize(100,30);
+        Tchlabel.setLocation(100, 210);
+        this.add(Tchlabel);
 
-        Insttext =new JTextField();
-        Insttext.setSize(120, 30);
-        Insttext.setLocation(220, 240);
-        this.add(Insttext);
+        Tchtext =new JTextField();
+        Tchtext.setSize(120, 30);
+        Tchtext.setLocation(220, 210);
+        this.add(Tchtext);
 
+        Utclabel = new JLabel("授课地点");
+        Utclabel.setSize(100, 30);
+        Utclabel.setLocation(100, 250);
+        this.add(Utclabel);
 
-        Inputlabel=new JLabel("请输入学号");
+        Utctext = new JTextField();
+        Utctext.setSize(120, 30);
+        Utctext.setLocation(220, 250);
+        this.add(Utctext);
+
+        Sharelabel = new JLabel("共享课程");
+        Sharelabel.setSize(100, 30);
+        Sharelabel.setLocation(100, 290);
+        this.add(Sharelabel);
+
+        Sharetext = new JTextField();
+        Sharetext.setSize(120, 30);
+        Sharetext.setLocation(220, 290);
+        this.add(Sharetext);
+
+        Inputlabel=new JLabel("请输入课程号");
         Inputlabel.setSize(100,30);
         Inputlabel.setLocation(100, 45);
         this.add(Inputlabel);
@@ -89,19 +112,26 @@ public class FindCourse extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String sno = Inputtext.getText();
-        System.out.println(sno);
+        String cno = Inputtext.getText();
+        System.out.println(cno);
 
-        SSStudentDaoImpl sd = new SSStudentDaoImpl();
-        SSStudent student = sd.findOne(sno);
+        SSCourseDaoImpl cd = new SSCourseDaoImpl();
+        SSCourse course = cd.findOne(cno);
 
-        if (student != null) {
-            Snotext.setText(student.getSno());
-            Nametext.setText(student.getSname());
-            Sextext.setText(student.getSex());
-            Insttext.setText(student.getInst());
+        if (course != null) {
+            Cnotext.setText(course.getCno());
+            Cnametext.setText(course.getCname());
+            Schtext.setText(course.getSch());
+            Tchtext.setText(course.getTch());
+            Utctext.setText(course.getUtc());
+            if (course.getShare().equals("1")) {
+                Sharetext.setText("是");
+            } else {
+                Sharetext.setText("否");
+            }
+
         } else {
-            JOptionPane.showMessageDialog(null, "您查询的学生不存在，请重新输入");
+            JOptionPane.showMessageDialog(null, "您查询的课程不存在，请重新输入");
         }
     }
 }
