@@ -2,12 +2,22 @@ package GUI.login;
 
 import GUI.dao.SSStudentDaoImpl;
 import GUI.entity.SSStudent;
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.XMLWriter;
 
 import javax.swing.*;
 import javax.swing.table.JTableHeader;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.List;
 
 public class SelectStudent extends JPanel implements ActionListener {
@@ -47,6 +57,45 @@ public class SelectStudent extends JPanel implements ActionListener {
             info[i][2] = sl.get(i).getSex();
             info[i][3] = sl.get(i).getInst();
         }
+
+        File file = new File("src/main/resources/db_A/student_A.xml");
+        if (file.isFile()) {
+            file.delete();
+        }
+        Document document = DocumentHelper.createDocument();
+        Element students = document.addElement("students");
+        for (SSStudent s : sl) {
+            Element student = students.addElement("student").addAttribute("sno", (s.getSno() + ""));
+            student.addElement("sname").addText(s.getSname());
+            student.addElement("sex").addText(s.getSex());
+            student.addElement("inst").addText(s.getInst());
+        }
+        OutputFormat format = OutputFormat.createPrettyPrint();
+        Writer writer = null;
+        XMLWriter xmlWriter = null;
+        try {
+            writer = new FileWriter(file);
+            xmlWriter = new XMLWriter(writer, format);
+            xmlWriter.write(document);
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        } finally {
+            if (xmlWriter != null) {
+                try {
+                    xmlWriter.close();
+                } catch (IOException exception) {
+                    exception.printStackTrace();
+                }
+            }
+            if (writer != null) {
+                try {
+                    writer.close();
+                } catch (IOException exception) {
+                    exception.printStackTrace();
+                }
+            }
+        }
+
         tabDemo = new JTable(info, title);
         jth = tabDemo.getTableHeader();
         scpDemo.getViewport().add(tabDemo);

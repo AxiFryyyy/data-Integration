@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<students>
+  <student sno="200010000">
+    <sname>金阳秋</sname>
+    <sex>男</sex>
+    <inst>数学系</inst>
+  </student>
+  <student sno="200010001">
+    <sname>孙凌</sname>
+    <sex>男</sex>
+    <inst>数学系</inst>
+  </student>
+  <student sno="200010002">
+    <sname>徐晴丽</sname>
+    <sex>女</sex>
+    <inst>数学系</inst>
+  </student>
+  <student sno="200010003">
+    <sname>溥瑜英</sname>
+    <sex>女</sex>
+    <inst>数学系</inst>
+  </student>
+  <student sno="200010004">
+    <sname>沈觅翠</sname>
+    <sex>女</sex>
+    <inst>数学系</inst>
+  </student>
+  <student sno="200010005">
+    <sname>管芳芳</sname>
+    <sex>女</sex>
+    <inst>数学系</inst>
+  </student>
+  <student sno="200010006">
+    <sname>黎风</sname>
+    <sex>男</sex>
+    <inst>数学系</inst>
+  </student>
+  <student sno="200010007">
+    <sname>合鸿</sname>
+    <sex>男</sex>
+    <inst>数学系</inst>
+  </student>
+  <student sno="200010008">
+    <sname>江柏</sname>
+    <sex>男</sex>
+    <inst>数学系</inst>
+  </student>
+  <student sno="200010009">
+    <sname>方杰</sname>
+    <sex>男</sex>
+    <inst>数学系</inst>
+  </student>
+  <student sno="200010010">
+    <sname>宗珺</sname>
+    <sex>女</sex>
+    <inst>数学系</inst>
+  </student>
+  <student sno="200010011">
+    <sname>辉怀思</sname>
+    <sex>男</sex>
+    <inst>数学系</inst>
+  </student>
+  <student sno="200010012">
+    <sname>费顺</sname>
+    <sex>男</sex>
+    <inst>数学系</inst>
+  </student>
+  <student sno="200010013">
+    <sname>范婉</sname>
+    <sex>女</sex>
+    <inst>数学系</inst>
+  </student>
+  <student sno="200010014">
+    <sname>孟曼冬</sname>
+    <sex>女</sex>
+    <inst>数学系</inst>
+  </student>
+</students>

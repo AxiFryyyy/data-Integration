@@ -1,13 +1,23 @@
 package GUI.login;
 
 import GUI.dao.SSSelectDaoImpl;
+import GUI.entity.SSCourse;
 import GUI.entity.SSSelect;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.XMLWriter;
 
 import javax.swing.*;
 import javax.swing.table.JTableHeader;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.List;
 
 public class SelCourse extends JPanel implements ActionListener {
@@ -62,6 +72,44 @@ public class SelCourse extends JPanel implements ActionListener {
                 info[i][1] = sl.get(i).getSname();
                 info[i][2] = sl.get(i).getGrade();
             }
+
+            File file = new File("src/main/resources/db_A/select_A.xml");
+            if (file.isFile()) {
+                file.delete();
+            }
+            Document document = DocumentHelper.createDocument();
+            Element selects = document.addElement("selects");
+            for (SSSelect s : sl) {
+                Element select = selects.addElement("select").addAttribute("cno", (s.getCno() + ""));
+                select.addElement("sno").addText(s.getSno());
+                select.addElement("grade").addText(s.getGrade());
+            }
+            OutputFormat format = OutputFormat.createPrettyPrint();
+            Writer writer = null;
+            XMLWriter xmlWriter = null;
+            try {
+                writer = new FileWriter(file);
+                xmlWriter = new XMLWriter(writer, format);
+                xmlWriter.write(document);
+            } catch (IOException exception) {
+                exception.printStackTrace();
+            } finally {
+                if (xmlWriter != null) {
+                    try {
+                        xmlWriter.close();
+                    } catch (IOException exception) {
+                        exception.printStackTrace();
+                    }
+                }
+                if (writer != null) {
+                    try {
+                        writer.close();
+                    } catch (IOException exception) {
+                        exception.printStackTrace();
+                    }
+                }
+            }
+
             tabDemo = new JTable(info, title);
             jth = tabDemo.getTableHeader();
             scpDemo.getViewport().add(tabDemo);

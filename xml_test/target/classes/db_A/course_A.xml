@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<courses>
+  <course cno="50000">
+    <cname>微积分</cname>
+    <sch>4</sch>
+    <tch>戴嘉澍</tch>
+    <utc>费楼A-318</utc>
+    <share>是</share>
+  </course>
+  <course cno="50001">
+    <cname>线性代数</cname>
+    <sch>3</sch>
+    <tch>华新曼</tch>
+    <utc>费楼A-320</utc>
+    <share>是</share>
+  </course>
+</courses>
