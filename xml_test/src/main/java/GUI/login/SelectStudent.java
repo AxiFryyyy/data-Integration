@@ -65,7 +65,8 @@ public class SelectStudent extends JPanel implements ActionListener {
         Document document = DocumentHelper.createDocument();
         Element students = document.addElement("students");
         for (SSStudent s : sl) {
-            Element student = students.addElement("student").addAttribute("sno", (s.getSno() + ""));
+            Element student = students.addElement("student");
+            student.addElement("sno").addText(s.getSno());
             student.addElement("sname").addText(s.getSname());
             student.addElement("sex").addText(s.getSex());
             student.addElement("inst").addText(s.getInst());
