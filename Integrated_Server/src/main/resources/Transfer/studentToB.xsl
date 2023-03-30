@@ -2,7 +2,6 @@
 <xsl:stylesheet version= "1.0" xmlns:xsl= "http://www.w3.org/1999/XSL/Transform">
     <xsl:output method= "xml" encoding= "gb2312"/>
     <xsl:template match="students">
-        <xsl:apply-templates/>
         <students>
             <xsl:for-each select="student">
                 <student>
