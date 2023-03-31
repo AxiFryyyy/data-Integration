@@ -3,6 +3,7 @@ package GUI;
 import GUI.dao.SSUserDaoImpl;
 import GUI.entity.SSUser;
 import GUI.login.Login;
+import GUI.login.LoginStudent;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -71,6 +72,8 @@ public class Test extends JFrame{
                 SSUser user = ud.findOne(user_name, user_pwd);
                 if (user!=null && user.getAuth().equals("1   ")) {
                     new Login();
+                } else if (user!=null && user.getAuth().equals("2   ")) {
+                    new LoginStudent(user.getName());
                 } else {
                     //登录失败这里会弹出来一个报错的小对话框
                     JOptionPane.showMessageDialog(null, "请检查账号和密码", "登录失败", JOptionPane.ERROR_MESSAGE);

@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class Demo_6 {
     public static void main(String args[]) {
-        validate("src/main/resources/confirm_A/student_A.xsd","src/main/resources/db_A/student_A.xml");
+        validate("src/main/resources/confirm_A/studentA.xsd","src/main/resources/db_A/studentA.xml");
     }
     public static boolean validate(String xsdPath,String xmlPath){
         boolean flag = false;
@@ -31,7 +31,7 @@ public class Demo_6 {
         } catch (SAXException e) {
             e.printStackTrace();
         } catch (IOException e) {
-            System.out.println("[Debug]xsd文件在验证xml文件时出错");
+            System.out.println("[Debug] xsd文件在验证xml文件时出错");
             e.printStackTrace();
         }
         return flag;

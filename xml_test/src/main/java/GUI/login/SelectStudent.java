@@ -58,7 +58,7 @@ public class SelectStudent extends JPanel implements ActionListener {
             info[i][3] = sl.get(i).getInst();
         }
 
-        File file = new File("src/main/resources/db_A/student_A.xml");
+        File file = new File("src/main/resources/db_A/studentA.xml");
         if (file.isFile()) {
             file.delete();
         }
@@ -66,10 +66,10 @@ public class SelectStudent extends JPanel implements ActionListener {
         Element students = document.addElement("students");
         for (SSStudent s : sl) {
             Element student = students.addElement("student");
-            student.addElement("sno").addText(s.getSno());
-            student.addElement("sname").addText(s.getSname());
-            student.addElement("sex").addText(s.getSex());
-            student.addElement("inst").addText(s.getInst());
+            student.addElement("学号").addText(s.getSno());
+            student.addElement("姓名").addText(s.getSname());
+            student.addElement("性别").addText(s.getSex());
+            student.addElement("院系").addText(s.getInst());
         }
         OutputFormat format = OutputFormat.createPrettyPrint();
         Writer writer = null;

@@ -3,7 +3,6 @@ package GUI.dao;
 import GUI.db.ConnectToSS;
 import GUI.entity.SSSelect;
 
-import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -60,5 +59,30 @@ public class SSSelectDaoImpl implements SSSelectDao{
             e.printStackTrace();
         }
         return sl;
+    }
+
+    @Override
+    public void addCourse(String cno, String sno) {
+        System.out.println(cno+" "+sno);
+        connection = new ConnectToSS().getConnection();
+        String sql = "insert into selcourse_t values('"+cno+"','"+sno+"',null)";
+        try {
+            ps = connection.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void deleteCourse(String cno, String sno) {
+        connection = new ConnectToSS().getConnection();
+        String sql = "delete from selcourse_t where cno='"+cno+"' and sno='"+sno+"'";
+        try {
+            ps = connection.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

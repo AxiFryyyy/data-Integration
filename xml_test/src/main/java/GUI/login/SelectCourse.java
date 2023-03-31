@@ -64,23 +64,20 @@ public class SelectCourse extends JPanel implements ActionListener {
             }
         }
 
-        File file = new File("src/main/resources/db_A/course_A.xml");
+        File file = new File("src/main/resources/db_A/classA.xml");
         if (file.isFile()) {
             file.delete();
         }
         Document document = DocumentHelper.createDocument();
-        Element courses = document.addElement("courses");
+        Element courses = document.addElement("classes");
         for (SSCourse c : cl) {
-            Element course = courses.addElement("course").addAttribute("cno", (c.getCno() + ""));
-            course.addElement("cname").addText(c.getCname());
-            course.addElement("sch").addText(c.getSch());
-            course.addElement("tch").addText(c.getTch());
-            course.addElement("utc").addText(c.getUtc());
-            if (c.getShare().equals("1")) {
-                course.addElement("share").addText("是");
-            } else {
-                courses.addElement("share").addText("否");
-            }
+            Element course = courses.addElement("class");
+            course.addElement("课程编号").addText(c.getCno());
+            course.addElement("课程名称").addText(c.getCname());
+            course.addElement("学分").addText(c.getSch());
+            course.addElement("授课老师").addText(c.getTch());
+            course.addElement("授课地点").addText(c.getUtc());
+            course.addElement("共享").addText(c.getShare());
         }
         OutputFormat format = OutputFormat.createPrettyPrint();
         Writer writer = null;

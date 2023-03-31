@@ -6,10 +6,10 @@
                 <xs:element name="student" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="sno" type="xs:string"></xs:element>
-                            <xs:element name="sname" type="xs:string"></xs:element>
-                            <xs:element name="sex" type="xs:string"></xs:element>
-                            <xs:element name="inst" type="xs:string"></xs:element>
+                            <xs:element name="学号" type="xs:string"></xs:element>
+                            <xs:element name="姓名" type="xs:string"></xs:element>
+                            <xs:element name="性别" type="xs:string"></xs:element>
+                            <xs:element name="院系" type="xs:string"></xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
