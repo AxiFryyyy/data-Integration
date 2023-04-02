@@ -1,0 +1,9 @@
+<archetype>
+  <id>Integrated_Server</id>
+  <sources>
+    <source>src/transfer/java/App.java</source>
+  </sources>
+  <testSources>
+    <source>src/test/java/AppTest.java</source>
+  </testSources>
+</archetype>
