@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book id="1001">
+        <name>面纱</name>
+        <info>11111111</info>
+    </book>
+    <book id="1002">
+        <name>UCLA</name>
+        <info>22222222</info>
+    </book>
+</books>
