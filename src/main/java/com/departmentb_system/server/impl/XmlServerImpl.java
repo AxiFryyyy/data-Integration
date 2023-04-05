@@ -19,4 +19,9 @@ public class XmlServerImpl implements XmlServer {
         }
         return xmlServerDao.changeChooseCourseTableToXML();
     }
+
+    @Override
+    public Document getTheShareCourse(){
+        return xmlServerDao.getTheShareCourse();
+    }
 }

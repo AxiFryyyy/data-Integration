@@ -1,6 +1,6 @@
 package com.departmentb_system.dao.impl;
 
-import com.departmentb_system.PO.CourseInfo;
+import com.departmentb_system.PO.mapper.TableToXMLColumnMapper;
 import com.departmentb_system.dao.XMLServerDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -36,9 +36,10 @@ public class XMLServerImpl implements XMLServerDao {
         for (Map<String, Object> row : resultList) {
             Element rowElement = doc.createElement("row");
             root.appendChild(rowElement);
+            TableToXMLColumnMapper mapper = TableToXMLColumnMapper.getTableToXMLColumnMapper();
             for (String columnName : row.keySet()) {
                 Object value = row.get(columnName);
-                Element columnElement = doc.createElement(columnName);
+                Element columnElement = doc.createElement(mapper.courseTableColumn(columnName));
                 columnElement.appendChild(doc.createTextNode(String.valueOf(value)));
                 rowElement.appendChild(columnElement);
             }
@@ -60,12 +61,72 @@ public class XMLServerImpl implements XMLServerDao {
         Element root = doc.createElement("data");
         doc.appendChild(root);
 
+        TableToXMLColumnMapper mapper = TableToXMLColumnMapper.getTableToXMLColumnMapper();
+
         for (Map<String, Object> row : resultList) {
             Element rowElement = doc.createElement("row");
             root.appendChild(rowElement);
             for (String columnName : row.keySet()) {
                 Object value = row.get(columnName);
-                Element columnElement = doc.createElement(columnName);
+                Element columnElement = doc.createElement(mapper.courseChoseTableColumn(columnName));
+                columnElement.appendChild(doc.createTextNode(String.valueOf(value)));
+                rowElement.appendChild(columnElement);
+            }
+        }
+        return doc;
+    }
+
+    @Override
+    public Document changeStudentTableToXML() {
+        List<Map<String,Object>> resultList = jdbcTemplate.queryForList("SELECT * FROM students");
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        DocumentBuilder db;
+        try{
+            db = dbf.newDocumentBuilder();
+        } catch (ParserConfigurationException e) {
+            throw new RuntimeException(e);
+        }
+        Document doc = db.newDocument();
+        Element root = doc.createElement("data");
+        doc.appendChild(root);
+
+        TableToXMLColumnMapper mapper = TableToXMLColumnMapper.getTableToXMLColumnMapper();
+
+        for (Map<String, Object> row : resultList) {
+            Element rowElement = doc.createElement("row");
+            root.appendChild(rowElement);
+            for (String columnName : row.keySet()) {
+                Object value = row.get(columnName);
+                Element columnElement = doc.createElement(mapper.studentTableColumn(columnName));
+                columnElement.appendChild(doc.createTextNode(String.valueOf(value)));
+                rowElement.appendChild(columnElement);
+            }
+        }
+        return doc;
+    }
+
+    @Override
+    public Document getTheShareCourse() {
+        List<Map<String,Object>> resultList = jdbcTemplate.queryForList("SELECT * FROM students WHERE SHARE_WITH = '1'");
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        DocumentBuilder db;
+        try{
+            db = dbf.newDocumentBuilder();
+        } catch (ParserConfigurationException e) {
+            throw new RuntimeException(e);
+        }
+        Document doc = db.newDocument();
+        Element root = doc.createElement("data");
+        doc.appendChild(root);
+
+        TableToXMLColumnMapper mapper = TableToXMLColumnMapper.getTableToXMLColumnMapper();
+
+        for (Map<String, Object> row : resultList) {
+            Element rowElement = doc.createElement("row");
+            root.appendChild(rowElement);
+            for (String columnName : row.keySet()) {
+                Object value = row.get(columnName);
+                Element columnElement = doc.createElement(mapper.studentTableColumn(columnName));
                 columnElement.appendChild(doc.createTextNode(String.valueOf(value)));
                 rowElement.appendChild(columnElement);
             }

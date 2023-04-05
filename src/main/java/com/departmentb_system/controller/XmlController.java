@@ -38,4 +38,8 @@ public class XmlController {
         StreamResult result = new StreamResult(response.getOutputStream());
         transformer.transform(source, result);
     }
+    @GetMapping("/getShare")
+    public void getSharedCourse(){
+
+    }
 }

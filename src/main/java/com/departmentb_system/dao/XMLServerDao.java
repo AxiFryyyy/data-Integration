@@ -7,4 +7,8 @@ public interface XMLServerDao {
     public Document changeCourseTableToXML();
 
     public Document changeChooseCourseTableToXML();
+
+    Document changeStudentTableToXML();
+
+    Document getTheShareCourse();
 }

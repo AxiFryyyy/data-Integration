@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <title>选課系统</title>
+    <link rel="stylesheet" type="text/css" href="courseManage.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+<header>
+    <form th:action = "@{/xmlServer/getShare}" method="get">
+        <button type="submit">獲取共享課程</button>
+    </form>
+
+</header>
+<main>
+    <h1>新增課程</h1>
+    <form id="course-form">
+        <label for="name">課程名:</label>
+        <input type="text" id="name" name="name"/>
+
+        <label for="hours">學時:</label>
+        <input type="text" id="hours" name="hours"/>
+
+        <label for="credits">學分:</label>
+        <input type="text" id="credits" name="credits"/>
+
+        <label for="teacher">老師:</label>
+        <input type="text" id="teacher" name="teacher"/>
+
+        <label for="location">地點:</label>
+        <input type="text" id="location" name="location"/>
+
+        <label for="shared">是否共享:</label>
+        <input type="checkbox" id="shared" name="shared"/>
+
+        <button type="submit">提交</button>
+    </form>
+</main>
+
+
+</body>
+</html>
