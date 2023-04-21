@@ -4,18 +4,26 @@
 <head>
     <title>选課系统</title>
     <link rel="stylesheet" type="text/css" href="courseManage.css">
+    <script src="/Course.js"></script>
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 <body>
 <header>
-    <form th:action = "@{/xmlServer/getShare}" method="get">
+    <form th:action = "@{/course-manage/getShare}" method="post">
         <button type="submit">獲取共享課程</button>
+    </form>
+    <form th:action = "@{/course-manage/transferShare}" method="post">
+        <button type="submit">發送共享課程</button>
     </form>
 
 </header>
 <main>
+    <div>
+        <a href = "/Home" class="btn btn-primary">返回</a>
+
+    </div>
     <h1>新增課程</h1>
-    <form id="course-form">
+    <form id="course-form"  th:action="@{/course-manage/addCourse}" method="post">
         <label for="name">課程名:</label>
         <input type="text" id="name" name="name"/>
 
@@ -37,6 +45,37 @@
         <button type="submit">提交</button>
     </form>
 </main>
+<table>
+<thead>
+    <tr>
+        <th>課程ID</th>
+        <th>課程名</th>
+        <th>學時</th>
+        <th>學分</th>
+        <th>老師</th>
+        <th>上課地點</th>
+        <th>共享</th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+    <tr th:each="course : ${coursesInfo}">
+        <td th:text="${course.course_id}"></td>
+        <td th:text="${course.course_name}"></td>
+        <td th:text="${course.course_hours}"></td>
+        <td th:text="${course.credit}"></td>
+        <td th:text="${course.teacher}"></td>
+        <td th:text="${course.location}"></td>
+        <td th:text="${course.share_with}"></td>
+        <td>
+            <button type="button" class="btn btn-danger" th:data-course-id="${course.course_id}" onclick="showConfirmationDialog(this.getAttribute('data-course-id'))">Delete</button>
+            <form th:id="'delete-form-'+ ${course.course_id}" th:action="@{/course-manage/delete/${course.course_id}}" method="post">
+                <input type="hidden" name="_method" value="DELETE"/>
+            </form>
+        </td>
+    </tr>
+</tbody>
+</table>
 
 
 </body>

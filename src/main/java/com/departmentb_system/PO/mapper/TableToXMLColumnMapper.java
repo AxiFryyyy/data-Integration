@@ -23,12 +23,13 @@ public class TableToXMLColumnMapper {
 
         courseCourseTableMap = new HashMap<>();
         courseCourseTableMap.put("COURSE_ID","课程编号");
-        courseCourseTableMap.put("STUDENT_ID","学号");
+        courseCourseTableMap.put("STUDENT_ID","学生编号");
         courseCourseTableMap.put("RESULT","得分");
 
         studentTableMap = new HashMap<>();
         studentTableMap.put("STUDENT_ID", "学号");
-        studentTableMap.put("STUDENT_NAME", "姓名");
+        studentTableMap.put("STUDENT_NAME", "名称");
+        studentTableMap.put("MAJOR","专业");
         studentTableMap.put("GENDER", "性別");
     }
 

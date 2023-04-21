@@ -13,7 +13,7 @@ With the Partitioning, OLAP, Data Mining and Real Application Testing options)
 With the Partitioning, OLAP, Data Mining and Real Application Testing options)
  File Encoding         : 65001
 
- Date: 22/03/2023 08:55:45
+ Date: 21/04/2023 10:30:35
 */
 
 
@@ -90,36 +90,37 @@ DISABLE ROW MOVEMENT
 -- ----------------------------
 -- Records of COURSES
 -- ----------------------------
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10002', '金融服务业', '32', '2', '工藤翼', '工程部', 'C');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10003', '贸易行业', '48', '3', '钱云熙', '工程部', 'A');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10004', '贸易行业', '16', '4', '宣仲賢', '物流部', NULL);
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10005', '制造业', '14', '3', '向志遠', '产品质量部', 'C');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10006', '饮食业', '16', '5', '李天榮', '采购部', 'C');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10007', '电讯業', '32', '1', '酒井詩乃', '行政管理部', NULL);
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10008', '制药业', '32', '2', '大野百花', '销售部', NULL);
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10009', '饮食业', '14', '1', '董睿', '公关部', NULL);
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10010', '咨询业', '14', '1', '翁頴思', '销售部', NULL);
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10011', '物流业', '14', '2', '渡部翼', '信息技术支持部', 'A');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10012', '资讯科技业', '32', '5', '村田樹', '研究及开发部', 'A');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10013', '电子行业', '16', '3', '小島優奈', '会计及金融部', 'C');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10014', '金融服务业', '48', '5', '陆睿', '生产部', 'C');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10015', '资讯科技业', '32', '4', '沈睿', '生产部', NULL);
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10016', '电子行业', '48', '1', '黎明詩', '会计及金融部', 'C');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10017', '贸易行业', '32', '2', '谭子韬', '工程部', NULL);
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10018', '工业', '14', '2', '酒井愛梨', '行政管理部', 'C');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10019', '金融服务业', '48', '3', '段睿', '信息技术支持部', 'C');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10020', '金融服务业', '32', '4', '小山翼', '外销部', NULL);
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10021', '工业', '32', '3', '孔璐', '会计及金融部', 'C');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10022', '饮食业', '32', '3', '任岚', '会计及金融部', 'C');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10023', '贸易行业', '48', '5', '史子韬', '人力资源部', 'C');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10024', '物流业', '14', '5', '小林百恵', '生产部', NULL);
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10025', '物流业', '16', '2', '西村拓哉', '会计及金融部', 'A');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10026', '物流业', '32', '1', '村上愛梨', '物流部', NULL);
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10027', '咨询业', '32', '5', '廖慧琳', '市场部', 'C');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10028', '贸易行业', '32', '2', '遠藤美月', '外销部', 'A');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10029', '饮食业', '48', '1', '许子韬', '人力资源部', NULL);
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10000', '物流业', '32', '3', '平野大地', '外销部', 'A');
-INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10001', '资讯科技业', '32', '2', '钟云熙', '工程部', 'C');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10030', 'dddd', '12', '1', 'asdfasdf', 'dddd', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10002', '金融服务业', '32', '2', '工藤翼', '工程部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10003', '贸易行业', '48', '3', '钱云熙', '工程部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10004', '贸易行业', '16', '4', '宣仲賢', '物流部', '0');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10005', '制造业', '14', '3', '向志遠', '产品质量部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10006', '饮食业', '16', '5', '李天榮', '采购部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10007', '电讯業', '32', '1', '酒井詩乃', '行政管理部', '0');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10008', '制药业', '32', '2', '大野百花', '销售部', '0');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10009', '饮食业', '14', '1', '董睿', '公关部', '0');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10010', '咨询业', '14', '1', '翁頴思', '销售部', '0');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10011', '物流业', '14', '2', '渡部翼', '信息技术支持部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10012', '资讯科技业', '32', '5', '村田樹', '研究及开发部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10013', '电子行业', '16', '3', '小島優奈', '会计及金融部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10014', '金融服务业', '48', '5', '陆睿', '生产部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10015', '资讯科技业', '32', '4', '沈睿', '生产部', '0');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10016', '电子行业', '48', '1', '黎明詩', '会计及金融部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10017', '贸易行业', '32', '2', '谭子韬', '工程部', '0');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10018', '工业', '14', '2', '酒井愛梨', '行政管理部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10019', '金融服务业', '48', '3', '段睿', '信息技术支持部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10020', '金融服务业', '32', '4', '小山翼', '外销部', '0');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10021', '工业', '32', '3', '孔璐', '会计及金融部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10022', '饮食业', '32', '3', '任岚', '会计及金融部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10023', '贸易行业', '48', '5', '史子韬', '人力资源部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10024', '物流业', '14', '5', '小林百恵', '生产部', '0');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10025', '物流业', '16', '2', '西村拓哉', '会计及金融部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10026', '物流业', '32', '1', '村上愛梨', '物流部', '0');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10027', '咨询业', '32', '5', '廖慧琳', '市场部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10028', '贸易行业', '32', '2', '遠藤美月', '外销部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10029', '饮食业', '48', '1', '许子韬', '人力资源部', '0');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10000', '物流业', '32', '3', '平野大地', '外销部', '1');
+INSERT INTO "DEPARTMENTB"."COURSES" VALUES ('10001', '资讯科技业', '32', '2', '钟云熙', '工程部', '1');
 
 -- ----------------------------
 -- Table structure for COURSES_CHOSE
@@ -149,6 +150,9 @@ DISABLE ROW MOVEMENT
 -- ----------------------------
 -- Records of COURSES_CHOSE
 -- ----------------------------
+INSERT INTO "DEPARTMENTB"."COURSES_CHOSE" VALUES ('10010', '200000001', NULL);
+INSERT INTO "DEPARTMENTB"."COURSES_CHOSE" VALUES ('10001', '200010000', NULL);
+INSERT INTO "DEPARTMENTB"."COURSES_CHOSE" VALUES ('10002', '200010000', NULL);
 INSERT INTO "DEPARTMENTB"."COURSES_CHOSE" VALUES ('10020', '200000009', '84');
 INSERT INTO "DEPARTMENTB"."COURSES_CHOSE" VALUES ('10021', '200000005', '01');
 INSERT INTO "DEPARTMENTB"."COURSES_CHOSE" VALUES ('10010', '200000006', '94');
@@ -352,6 +356,7 @@ DISABLE ROW MOVEMENT
 -- ----------------------------
 -- Records of STUDENTS
 -- ----------------------------
+INSERT INTO "DEPARTMENTB"."STUDENTS" VALUES ('200010000', '金阳秋', 'm', '数学系', 'null');
 INSERT INTO "DEPARTMENTB"."STUDENTS" VALUES ('200000000', '吕安琪', '女', '軟件工程', 'cnTGCJ');
 INSERT INTO "DEPARTMENTB"."STUDENTS" VALUES ('200000001', '徐國明', '男', '軟件工程', 'nrufxG');
 INSERT INTO "DEPARTMENTB"."STUDENTS" VALUES ('200000002', '常致远', '男', '軟件工程', 'pz3Srf');
@@ -361,7 +366,13 @@ INSERT INTO "DEPARTMENTB"."STUDENTS" VALUES ('200000005', '罗璐', '女', '軟�
 INSERT INTO "DEPARTMENTB"."STUDENTS" VALUES ('200000006', '潘杰宏', '男', '軟件工程', 'tIZpYu');
 INSERT INTO "DEPARTMENTB"."STUDENTS" VALUES ('200000007', '陈秀英', '女', '軟件工程', 'tq8H9v');
 INSERT INTO "DEPARTMENTB"."STUDENTS" VALUES ('200000008', '雷致远', '男', '軟件工程', 'NSo8Fr');
-INSERT INTO "DEPARTMENTB"."STUDENTS" VALUES ('200000009', '丁震南', '男', '軟件工程', 'W2IPDe');
+INSERT INTO "DEPARTMENTB"."STUDENTS" VALUES ('200000009', '丁震南', '男', '軟件工程', '9QAGi');
+
+-- ----------------------------
+-- Sequence structure for COURSES_SEQ
+-- ----------------------------
+DROP SEQUENCE "DEPARTMENTB"."COURSES_SEQ";
+CREATE SEQUENCE "DEPARTMENTB"."COURSES_SEQ" MINVALUE 10001 MAXVALUE 99999 INCREMENT BY 1 NOCACHE;
 
 -- ----------------------------
 -- Primary Key structure for table ACCOUNT
@@ -372,6 +383,17 @@ ALTER TABLE "DEPARTMENTB"."ACCOUNT" ADD CONSTRAINT "SYS_C0011048" PRIMARY KEY ("
 -- Primary Key structure for table COURSES
 -- ----------------------------
 ALTER TABLE "DEPARTMENTB"."COURSES" ADD CONSTRAINT "SYS_C0011102" PRIMARY KEY ("COURSE_ID");
+
+-- ----------------------------
+-- Triggers structure for table COURSES
+-- ----------------------------
+CREATE TRIGGER "DEPARTMENTB"."TRG_COURSES" BEFORE INSERT ON "DEPARTMENTB"."COURSES" REFERENCING OLD AS "OLD" NEW AS "NEW" FOR EACH ROW 
+BEGIN
+    SELECT courses_seq.NEXTVAL
+    INTO :new.course_id
+    FROM dual;
+END;
+/
 
 -- ----------------------------
 -- Primary Key structure for table COURSES_CHOSE

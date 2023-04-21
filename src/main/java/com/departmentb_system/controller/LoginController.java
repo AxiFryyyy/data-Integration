@@ -40,6 +40,7 @@ public class LoginController {
             return "Login";
         }
         request.getSession().setAttribute("username", user.getHandler_id());
+        request.getSession().setAttribute("role",user.getAccount_grade());
         return "redirect:/Home";
 
     }

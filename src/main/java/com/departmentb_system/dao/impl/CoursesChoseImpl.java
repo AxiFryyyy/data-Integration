@@ -1,10 +1,11 @@
 package com.departmentb_system.dao.impl;
 
 
-import com.departmentb_system.PO.CourseChoseList;
 import com.departmentb_system.PO.CourseInfo;
 import com.departmentb_system.PO.CoursesChose;
+import com.departmentb_system.PO.Student;
 import com.departmentb_system.dao.CoursesChoseDao;
+import com.departmentb_system.dao.CoursesManageDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -59,4 +60,60 @@ public class CoursesChoseImpl implements CoursesChoseDao {
         }
         return true;
     }
+
+    @Override
+    public  Student findThisStudent(String studentID){
+        String sql = "SELECT * FROM students WHERE student_id = ?";
+        RowMapper<Student> rowMapper = new BeanPropertyRowMapper<>(Student.class);
+        List<Student> students;
+        try{
+            students = jdbcTemplate.query(sql,rowMapper,studentID);
+        }catch(Error e){
+            return null;
+        }
+        if(students.size() == 0)return null;
+        return students.get(0);
+    }
+
+    @Override
+    public CourseInfo findCourseInMine(String courseID){
+        String sql = "SELECT * FROM courses WHERE course_id = ?";
+        RowMapper<CourseInfo> rowMapper = new BeanPropertyRowMapper<>(CourseInfo.class);
+        List<CourseInfo> course;
+        try{
+            course = jdbcTemplate.query(sql,rowMapper,courseID);
+
+        }catch (Error e){
+            return null;
+        }
+        if(course.size() == 0){
+            return null;
+        }
+        return course.get(0);
+    }
+
+    @Override
+    public Boolean deleteCourseChose(String courseId, String studentId) {
+        String sql = "DELETE FROM courses_chose WHERE course_id = ? AND student_id = ?";
+        try{
+            jdbcTemplate.update(sql,courseId,studentId);
+        }catch(Error e){
+            System.out.println(e);
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public Boolean insertStudent(String studentId, String studentName, String gender, String major){
+        String sql = "INSERT INTO students(student_id,student_name, gender,major,password) VALUES (?, ?, ? ,?, null)";
+        try{
+            jdbcTemplate.update(sql,studentId,studentName,gender,major);
+        }catch(Error e){
+            System.out.println(e);
+            return false;
+        }
+        return true;
+    }
+
 }

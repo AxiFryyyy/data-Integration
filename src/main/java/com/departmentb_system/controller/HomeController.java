@@ -2,6 +2,7 @@ package com.departmentb_system.controller;
 
 import com.departmentb_system.PO.User;
 import com.departmentb_system.dao.UserDao;
+import com.departmentb_system.socket.ClientB_Socket;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,7 @@ public class HomeController {
     @GetMapping
     public String getHome(Model model){
         model.addAttribute("username",username());
+
         return "Home";
     }
     @ModelAttribute(name="username")

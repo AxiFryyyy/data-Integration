@@ -30,14 +30,15 @@ public class XMLServerImpl implements XMLServerDao {
             throw new RuntimeException(e);
         }
         Document doc = db.newDocument();
-        Element root = doc.createElement("data");
+        Element root = doc.createElement("classes");
         doc.appendChild(root);
 
         for (Map<String, Object> row : resultList) {
-            Element rowElement = doc.createElement("row");
+            Element rowElement = doc.createElement("class");
             root.appendChild(rowElement);
             TableToXMLColumnMapper mapper = TableToXMLColumnMapper.getTableToXMLColumnMapper();
             for (String columnName : row.keySet()) {
+                if(columnName.equals("COURSE_HOURS"))continue;
                 Object value = row.get(columnName);
                 Element columnElement = doc.createElement(mapper.courseTableColumn(columnName));
                 columnElement.appendChild(doc.createTextNode(String.valueOf(value)));
@@ -58,13 +59,13 @@ public class XMLServerImpl implements XMLServerDao {
             throw new RuntimeException(e);
         }
         Document doc = db.newDocument();
-        Element root = doc.createElement("data");
+        Element root = doc.createElement("choices");
         doc.appendChild(root);
 
         TableToXMLColumnMapper mapper = TableToXMLColumnMapper.getTableToXMLColumnMapper();
 
         for (Map<String, Object> row : resultList) {
-            Element rowElement = doc.createElement("row");
+            Element rowElement = doc.createElement("choice");
             root.appendChild(rowElement);
             for (String columnName : row.keySet()) {
                 Object value = row.get(columnName);
@@ -87,17 +88,19 @@ public class XMLServerImpl implements XMLServerDao {
             throw new RuntimeException(e);
         }
         Document doc = db.newDocument();
-        Element root = doc.createElement("data");
+        Element root = doc.createElement("students");
         doc.appendChild(root);
 
         TableToXMLColumnMapper mapper = TableToXMLColumnMapper.getTableToXMLColumnMapper();
 
         for (Map<String, Object> row : resultList) {
-            Element rowElement = doc.createElement("row");
+            Element rowElement = doc.createElement("student");
             root.appendChild(rowElement);
             for (String columnName : row.keySet()) {
+                if(columnName.equals("PASSWORD"))continue;
                 Object value = row.get(columnName);
                 Element columnElement = doc.createElement(mapper.studentTableColumn(columnName));
+
                 columnElement.appendChild(doc.createTextNode(String.valueOf(value)));
                 rowElement.appendChild(columnElement);
             }
@@ -107,7 +110,7 @@ public class XMLServerImpl implements XMLServerDao {
 
     @Override
     public Document getTheShareCourse() {
-        List<Map<String,Object>> resultList = jdbcTemplate.queryForList("SELECT * FROM students WHERE SHARE_WITH = '1'");
+        List<Map<String,Object>> resultList = jdbcTemplate.queryForList("SELECT * FROM courses WHERE SHARE_WITH = '1'");
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         DocumentBuilder db;
         try{
@@ -116,17 +119,18 @@ public class XMLServerImpl implements XMLServerDao {
             throw new RuntimeException(e);
         }
         Document doc = db.newDocument();
-        Element root = doc.createElement("data");
+        Element root = doc.createElement("classes");
         doc.appendChild(root);
 
         TableToXMLColumnMapper mapper = TableToXMLColumnMapper.getTableToXMLColumnMapper();
 
         for (Map<String, Object> row : resultList) {
-            Element rowElement = doc.createElement("row");
+            Element rowElement = doc.createElement("class");
             root.appendChild(rowElement);
             for (String columnName : row.keySet()) {
+                if(columnName.equals("COURSE_HOURS"))continue;
                 Object value = row.get(columnName);
-                Element columnElement = doc.createElement(mapper.studentTableColumn(columnName));
+                Element columnElement = doc.createElement(mapper.courseTableColumn(columnName));
                 columnElement.appendChild(doc.createTextNode(String.valueOf(value)));
                 rowElement.appendChild(columnElement);
             }

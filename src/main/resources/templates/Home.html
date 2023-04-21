@@ -16,6 +16,10 @@
         <input type="hidden" name="table" value="choseCourse">
         <button type="submit">getCourseChoseXML</button>
     </form>
+    <form th:action="@{/xmlServer}" method="GET">
+        <input type="hidden" name="table" value="students">
+        <button type="submit">getStudent</button>
+    </form>
     <div class="container">
         <a href="myCourses">
             <i class="fa fa-columns fa-5x"></i>
