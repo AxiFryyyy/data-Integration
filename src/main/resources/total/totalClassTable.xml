@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classes>
+    <class>
+        <id>10005</id>
+        <name>aaa</name>
+        <score>90</score>
+        <teacher>bbb</teacher>
+        <location>ddd</location>
+    </class>
+    <class>
+        <id>10006</id>
+        <name>ghfghgf</name>
+        <score>90</score>
+        <teacher>hgjghjh</teacher>
+        <location>ghjhj</location>
+    </class>
+</classes>

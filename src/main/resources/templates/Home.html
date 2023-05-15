@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SpringMVC Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+    <script type="text/javascript" th:src="@{js/socket.js}"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to Integrated Server</h1>
+    <div class="button-container">
+        <button class="btn" id="collectionA" onclick=collect("A")>collectionA</button>
+        <button class="btn" id="collectionB" onclick=collect("B")>collectionB</button>
+        <button class="btn" id="collectionC" onclick=collect("C")>collectionC</button>
+        <button class="btn" id="showTable" onclick="window.location.href='http://localhost:8080/Home/table'">showTable</button>
+    </div>
+    <div class="log-container">
+        <textarea id="log" th:text="${output}"></textarea>
+    </div>
+</div>
+
+</body>
+</html>
+

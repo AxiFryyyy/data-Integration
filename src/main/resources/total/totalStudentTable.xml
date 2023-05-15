@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<students>
+    <student>
+        <id>200010022</id>
+        <name>金阳秋</name>
+        <sex>男</sex>
+        <major>数学系</major>
+    </student>
+    <student>
+        <id>200010001</id>
+        <name>孙凌</name>
+        <sex>男</sex>
+        <major>数学系</major>
+    </student>
+</students>

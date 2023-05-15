@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:thm="http://www.thymeleaf.org/thymeleaf-extras-manager"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+  <title>Table Page</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container my-5">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" th:each="xmlData, status : ${xmlDataList}">
+      <a class="nav-link" th:id="'nav-tab-' + ${status.index}"
+         th:href="'#tab-' + ${status.index}"
+         th:text="${status.index == 0 ? 'course' : (status.index == 1 ? 'student' : 'choose course')}"
+         data-toggle="tab"> </a>
+    </li>
+  </ul>
+  <div class="tab-content my-2">
+    <div th:each="xmlData, status : ${xmlDataList}"
+         th:id="'tab-' + ${status.index}"
+         class="tab-pane fade"
+         role="tabpanel"
+         th:classappend="${status.index == 0 ? 'show active' : ''}">
+      <table class="table w-100 my-2">
+        <thead>
+        <th th:each="key : ${xmlData[0].keySet()}" th:text="${key}"></th>
+        </thead>
+        <tbody>
+        <tr th:each="row : ${xmlData}">
+          <td th:each="tx: ${row.values()}" th:text = "${tx}"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+
+
+</html>

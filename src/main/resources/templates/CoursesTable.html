@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <title>选課系统</title>
+    <link rel="stylesheet" type="text/css" href="coursesTable.css">
+    <script src="/Course.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+<header>
+
+</header>
+<main>
+    <div>
+        <a href = "/Home" class="btn btn-primary">返回</a>
+    </div>
+</main>
+<table>
+<thead>
+    <tr>
+        <th>課程ID</th>
+        <th>課程名</th>
+        <th>學時</th>
+        <th>學分</th>
+        <th>老師</th>
+        <th>上課地點</th>
+        <th>共享</th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+    <tr th:each="course : ${coursesInfo}">
+        <td th:text="${course.course_id}"></td>
+        <td th:text="${course.course_name}"></td>
+        <td th:text="${course.course_hours}"></td>
+        <td th:text="${course.credit}"></td>
+        <td th:text="${course.teacher}"></td>
+        <td th:text="${course.location}"></td>
+        <td th:text="${course.share_with}"></td>
+    </tr>
+</tbody>
+</table>
+
+
+</body>
+</html>
