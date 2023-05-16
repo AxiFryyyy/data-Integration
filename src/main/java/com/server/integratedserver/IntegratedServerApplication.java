@@ -1,16 +1,10 @@
 package com.server.integratedserver;
 
-import com.server.integratedserver.webSocket.MyWebSocketHandler;
 import com.server.integratedserver.webSocket.Server_Socket;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.messaging.simp.stomp.StompSessionHandler;
-import org.springframework.stereotype.Component;
-import org.springframework.web.socket.WebSocketHandler;
-import org.springframework.web.socket.client.standard.StandardWebSocketClient;
-import org.springframework.web.socket.messaging.WebSocketStompClient;
 
 
 @SpringBootApplication

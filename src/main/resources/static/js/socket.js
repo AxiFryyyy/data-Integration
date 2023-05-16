@@ -14,3 +14,12 @@ function collect(ToCollect) {
             console.log('There has been a problem with your fetch operation: ', error.message);
         });
 }
+
+let socket = new WebSocket('ws://localhost:8080/websocket');
+socket.onmessage = function(event) {
+    console.log('Received message: ' + event.data);
+    let obj = JSON.parse(event.data);
+    let msg = obj["msg"];
+    let textArea = document.getElementById('log');
+    textArea.textContent = msg;
+};

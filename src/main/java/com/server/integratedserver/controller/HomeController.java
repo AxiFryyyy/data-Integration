@@ -1,14 +1,20 @@
 package com.server.integratedserver.controller;
 
+import com.server.integratedserver.VO.MsgResponseVo;
 import com.server.integratedserver.service.XmlService;
 import com.server.integratedserver.webSocket.Server_Socket;
+import com.server.integratedserver.webSocket.WebSocketServer;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.socket.TextMessage;
+import com.alibaba.fastjson.JSON;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -24,15 +30,12 @@ public class HomeController {
 
     @Autowired
     private XmlService xmlService;
-    private static Model model;
-    private String output;
+
+
 
     @GetMapping
     public String getHome(Model model){
-        HomeController.model = model;
-        output += "服务端已启动，等待WebSocket客户端连接...\n";
-        request.getSession().setAttribute("output", output);
-        model.addAttribute("output", output);
+
         return "Home";
     }
 
@@ -40,7 +43,6 @@ public class HomeController {
     public String collect(Model model, @PathVariable String where){
         serverSocket.actionPerformed("collect " + where);
 
-        model.addAttribute("output", output);
         return "Home";
     }
 
@@ -59,8 +61,4 @@ public class HomeController {
         return modelAndView;
     }
 
-    public void addString(String str){
-        output += str + "/n";
-        getHome(model);
-    }
 }

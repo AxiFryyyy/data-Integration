@@ -1,44 +1,37 @@
 package com.server.integratedserver.webSocket;
 
+import jakarta.websocket.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-import org.springframework.web.socket.*;
+import org.springframework.web.socket.TextMessage;
+import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.http.WebSocket;
-import java.util.ArrayList;
-import java.util.List;
 
+
+@Component
 public class MyWebSocketHandler extends TextWebSocketHandler {
-    private WebSocketSession session;
-
-    private static final List<WebSocketSession> clients = new ArrayList<>();
+    private final static Logger logger = LoggerFactory.getLogger(MyWebSocketHandler.class);
+    private static WebSocketSession session;
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-        this.session = session;
-        clients.add(session);
-        // 在建立WebSocket连接时，启动一个线程来处理客户端的消息
-        new Thread(new WebSocketThread()).start();
+        super.afterConnectionEstablished(session);
+        MyWebSocketHandler.session = session;
+        // 在此处可以处理新连接建立时的逻辑，比如将该 Session 添加到在线列表中等。
     }
 
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
-        // 处理收到的消息
+        super.handleTextMessage(session, message);
+        // 在此处处理接收到消息的逻辑，比如将消息广播给其他在线用户等。
+        logger.info("Received message: " + message.getPayload());
+    }
+    public static void sendInfo(String message) throws IOException {
+        logger.info(message);
+        //session.getBasicRemote().sendText(message);
     }
 
-    private class WebSocketThread implements Runnable {
-        @Override
-        public void run() {
-            /**try {
-                // 在独立的线程中处理WebSocket连接
-                ServerSocket serverSocket = new ServerSocket(new InetSocketAddress(9999));
-                ClientSoc clientSocket = serverSocket.accept();
-                // 处理服务器间的通信
-            } catch (IOException e) {
-                e.printStackTrace();
-            }**/
-        }
-    }
 }

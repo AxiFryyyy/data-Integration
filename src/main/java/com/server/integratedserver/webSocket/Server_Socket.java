@@ -1,6 +1,7 @@
 package com.server.integratedserver.webSocket;
 
 import com.server.integratedserver.controller.HomeController;
+import com.server.integratedserver.controller.MessageController;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -29,13 +30,19 @@ public class Server_Socket implements Runnable{
     //创建一个线程池,如果有客户端连接就创建一个线程, 与之通信
     public static int share_count = 0;
 
+    MessageController messageController;
+    @Autowired
+    public Server_Socket(MessageController controller){
+        this.messageController = controller;
+    }
+
     public static ExecutorService executorService = Executors.newCachedThreadPool();
 
-    public static void handle(Socket socket) {
+    public void handle(Socket socket) {
         System.out.println("线程ID:" + Thread.currentThread().getId()
                 + "  线程名称:" + Thread.currentThread().getName());
-        //textArea.append("线程ID:" + Thread.currentThread().getId()
-                //+ "  线程名称:" + Thread.currentThread().getName() + "\n");
+        sendMessageToFronted("线程ID:" + Thread.currentThread().getId()
+                + "  线程名称:" + Thread.currentThread().getName());
         clients.add(socket);
         try {
             while (true) {
@@ -51,7 +58,7 @@ public class Server_Socket implements Runnable{
                 while(true){
                     String message = reader.readLine();
                     System.out.println("Received message from client: " + message);
-                    //textArea.append("Received message from client: " + message + "\n");
+                    sendMessageToFronted("Received message from client: " + message + "\n");
                     //客户端表明通信身份，客户端连接后必须先向服务端发送自己的身份，否则一些操作将无法完成
                     if(message.equals("A")){
                         /*int c = 0;
@@ -318,7 +325,7 @@ public class Server_Socket implements Runnable{
                                 fis.close();
                                 clientWriter.flush();
                                 System.out.println("文件发送完成。");
-                                //textArea.append("文件发送完成。" + "\n");
+                                sendMessageToFronted("文件发送完成。");
                             }
                         }
                     }
@@ -337,7 +344,7 @@ public class Server_Socket implements Runnable{
                                 clientWriter.println(message);
                                 clientWriter.flush();
                                 /*String m = reader.readLine();
-                                textArea.append("Received m from client: " + m + "\n");*/
+                                sendMessageToFronted("Received m from client: " + m);*/
                             }
                         }
 
@@ -383,7 +390,7 @@ public class Server_Socket implements Runnable{
                                 fis.close();
                                 clientWriter.flush();
                                 System.out.println("文件发送完成。");
-                                //textArea.append("文件发送完成。" + "\n");
+                                sendMessageToFronted("文件发送完成。");
                             }
                         }
                     }
@@ -489,7 +496,7 @@ public class Server_Socket implements Runnable{
                     }
                     else if(message.equals("A will share *")){
                         String mm = reader.readLine();
-                        //textArea.append("Received message from client: " + mm + "\n");
+                        sendMessageToFronted("Received message from client: " + mm);
                         int line = Integer.parseInt(mm.substring(12));
                         System.out.println("行数为" + line);
                         FileOutputStream fos = new FileOutputStream("src/main/resources/output/share_A.xml");
@@ -499,7 +506,7 @@ public class Server_Socket implements Runnable{
                             fos.write(bytes);
                         }
                         fos.close();
-                        //textArea.append("接收成功！" + "\n");
+                        sendMessageToFronted("接收成功！");
                         share_count++;
                         if(share_count%2 == 0){
                             //合并文件并向share院系发送合并后的文件
@@ -586,7 +593,7 @@ public class Server_Socket implements Runnable{
                                     fis.close();
                                     clientWriter.flush();
                                     System.out.println("文件发送完成。");
-                                    //textArea.append("文件发送完成。" + "\n");
+                                    sendMessageToFronted("文件发送完成。");
                                 }
                             }
                         }
@@ -607,7 +614,7 @@ public class Server_Socket implements Runnable{
                     }
                     else if(message.equals("B will share *")){
                         String mm = reader.readLine();
-                        //textArea.append("Received message from client: " + mm + "\n");
+                        sendMessageToFronted("Received message from client: " + mm);
                         int line = Integer.parseInt(mm.substring(12));
                         System.out.println("行数为" + line);
                         FileOutputStream fos = new FileOutputStream("src/main/resources/output/share_B.xml");
@@ -693,7 +700,7 @@ public class Server_Socket implements Runnable{
                                     fis.close();
                                     clientWriter.flush();
                                     System.out.println("文件发送完成。");
-                                    //textArea.append("文件发送完成。" + "\n");
+                                    sendMessageToFronted("文件发送完成。");
                                 }
                             }
                         }
@@ -714,7 +721,7 @@ public class Server_Socket implements Runnable{
                     else if(message.equals("C will share *")){
 
                         String mm = reader.readLine();
-                        //textArea.append("Received message from client: " + mm + "\n");
+                        sendMessageToFronted("Received message from client: " + mm);
                         int line = Integer.parseInt(mm.substring(12));
                         System.out.println("行数为" + line);
                         FileOutputStream fos = new FileOutputStream("src/main/resources/output/share_C.xml");
@@ -799,7 +806,7 @@ public class Server_Socket implements Runnable{
                                     fis.close();
                                     clientWriter.flush();
                                     System.out.println("文件发送完成。");
-                                    //textArea.append("文件发送完成。" + "\n");
+                                    sendMessageToFronted("文件发送完成。");
                                 }
                             }
                         }
@@ -874,7 +881,7 @@ public class Server_Socket implements Runnable{
                                 FileInputStream fis1 = new FileInputStream(targetStudentTable);
                                 //发送学生信息表
                                 System.out.println("准备发送选课文件，文件行数为：" + countLinesInXML(targetStudentTable));
-                                //textArea.append("准备发送选课文件，文件行数为：" + countLinesInXML(targetStudentTable) + "\n");
+                                sendMessageToFronted("准备发送选课文件，文件行数为：" + countLinesInXML(targetStudentTable));
                                 byte[] bytes1 = ("准备发送选课文件，文件行数为：" + countLinesInXML(targetStudentTable) + "\n").getBytes();
                                 clientOutput.write(bytes1);
                                 byte[] buffer1 = new byte[1024];
@@ -883,12 +890,12 @@ public class Server_Socket implements Runnable{
                                     clientOutput.write(buffer1, 0, len1);
                                 }
                                 fis1.close();
-                                //textArea.append("文件发送完成" + "\n");
+                                sendMessageToFronted("文件发送完成");
                                 clientWriter.flush();
                                 //发送选课表
                                 FileInputStream fis2 = new FileInputStream(targetChoiceTable);
                                 System.out.println("准备发送选课文件，文件行数为：" + countLinesInXML(targetChoiceTable));
-                                //textArea.append("准备发送选课文件，文件行数为：" + countLinesInXML(targetChoiceTable) + "\n");
+                                sendMessageToFronted("准备发送选课文件，文件行数为：" + countLinesInXML(targetChoiceTable));
                                 byte[] bytes2 = ("准备发送选课文件，文件行数为：" + countLinesInXML(targetChoiceTable) + "\n").getBytes();
                                 clientOutput.write(bytes2);
                                 byte[] buffer2 = new byte[1024];
@@ -897,14 +904,14 @@ public class Server_Socket implements Runnable{
                                     clientOutput.write(buffer2, 0, len2);
                                 }
                                 fis2.close();
-                                //textArea.append("文件发送完成" + "\n");
+                                sendMessageToFronted("文件发送完成");
                                 clientWriter.flush();
                             }
                         }
                     }
                     //处理退课请求
                     else if(message.contains("delete") && !message.contains("success") && !message.contains("fail")){
-                        //textArea.append("开始删除" + "\n");
+                        sendMessageToFronted("开始删除");
                         String[] mlist = message.split(" ");
                         String source = mlist[1];
                         String studentid = mlist[2];
@@ -914,14 +921,14 @@ public class Server_Socket implements Runnable{
                         if(target.equals("A")) target_ip = ip_A;
                         else if(target.equals("B")) target_ip = ip_B;
                         else target_ip = ip_C;
-                        //textArea.append("目标客户端为" + target + ":" + target_ip + "\n");
+                        sendMessageToFronted("目标客户端为" + target + ":" + target_ip);
                         //转发消息给目标客户端
                         String lastip = null;
                         for (Socket client : clients) {
                             String clientIP = client.getInetAddress().getHostAddress();
                             if (target_ip.equals(clientIP) && !clientIP.equals(lastip)) {
                                 lastip = clientIP;
-                                //textArea.append("正在发送到目标客户端" + target + ":" + clientIP + "\n");
+                                sendMessageToFronted( "正在发送到目标客户端" + target + ":" + clientIP);
                                 OutputStream clientOutput = client.getOutputStream();
                                 PrintWriter clientWriter = new PrintWriter(new OutputStreamWriter(clientOutput));
                                 clientWriter.println("delete " + target + " " + studentid + " " + classid);
@@ -945,7 +952,7 @@ public class Server_Socket implements Runnable{
     }
     // 按钮点击事件处理
     public void actionPerformed(String button) {
-        //textArea.append("服务端按下了按钮" + button + "\n");
+        sendMessageToFronted("服务端按下了按钮" + button);
         if(button.equals("collect A")){
             //flag为false表示客户端未连接或连接了未记录ip，true表示连接了并且已经记录ip
             boolean flag = false;
@@ -966,7 +973,7 @@ public class Server_Socket implements Runnable{
                     flag = true;
                 }
             }
-            //if(!flag){ textArea.append("服务端A未连接" + "\n"); }
+            if(!flag){ sendMessageToFronted("服务端A未连接"); }
         }
         else if(button.equals("collect B")){
             boolean flag = false;
@@ -987,7 +994,7 @@ public class Server_Socket implements Runnable{
                     flag = true;
                 }
             }
-            //if(!flag){ textArea.append("服务端B未连接" + "\n"); }
+            if(!flag){ sendMessageToFronted("服务端B未连接"); }
         }
         else if(button.equals("collect C")){
             boolean flag = false;
@@ -1008,7 +1015,7 @@ public class Server_Socket implements Runnable{
                     flag = true;
                 }
             }
-            //if(!flag){ textArea.append("服务端C未连接" + "\n"); }
+            if(!flag){ sendMessageToFronted("服务端C未连接"); }
         }
 
     }
@@ -1025,6 +1032,14 @@ public class Server_Socket implements Runnable{
         fileReader.close();
         return lines;
     }
+    public void sendMessageToFronted(String message){
+        try {
+            messageController.addString(message);
+        }catch (IOException e){
+            System.err.println(e);
+        }
+
+    }
 
     public void run() {
         // 创建服务端Socket并等待客户端连接
@@ -1034,7 +1049,7 @@ public class Server_Socket implements Runnable{
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        //homeController.addString("aaa");
+        sendMessageToFronted("aaa");
         System.out.println("服务端已启动，等待客户端连接...\n");
         while (true) {
             //监听客户端
@@ -1044,7 +1059,7 @@ public class Server_Socket implements Runnable{
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            //textArea.append("有客户端连接，IP地址为：" + socket.getInetAddress().getHostAddress() + "\n");
+            sendMessageToFronted("有客户端连接，IP地址为：" + socket.getInetAddress().getHostAddress() + "\n");
             System.out.println("有客户端连接");
             clients.add(socket);
             System.out.println(socket.getInetAddress().getHostAddress());
