@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<evaluations>
+    <evaluation>
+        <id>0001</id>
+        <teacher>戴嘉澍</teacher>
+        <course>微积分</course>
+        <attendence>20</attendence>
+        <virtue>30</virtue>
+        <teaching>24</teaching>
+        <achievement>12</achievement>
+    </evaluation>
+</evaluations>

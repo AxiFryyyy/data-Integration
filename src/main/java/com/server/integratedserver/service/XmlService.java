@@ -23,6 +23,7 @@ public class XmlService {
     private static final String classXMLPath = "/total/totalClassTable.xml";
     private static final String studentXMLPath = "/total/totalStudentTable.xml";
     private static final String chooseCourseXMLPath = "/total/totalClassChoiceTable.xml";
+    private static final String chooseTeachersXMLPath = "/total/totalTeacherEvaluateTable.xml";
     public List<Map<String, String>> fetchStudentsData() {
         List<Map<String, String>> dataList = new ArrayList<>();
         try {
@@ -91,6 +92,35 @@ public class XmlService {
         List<Map<String, String>> dataList = new ArrayList<>();
         try {
             File file = new ClassPathResource(chooseCourseXMLPath).getFile();
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            DocumentBuilder db = dbf.newDocumentBuilder();
+            Document doc = db.parse(file);
+            doc.getDocumentElement().normalize();
+            NodeList nodeList = doc.getElementsByTagName("choice");
+            for (int i = 0; i < nodeList.getLength(); i++) {
+                Node node = nodeList.item(i);
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    Element element = (Element) node;
+                    String sid = element.getElementsByTagName("sid").item(0).getTextContent();
+                    String cid = element.getElementsByTagName("cid").item(0).getTextContent();
+                    String score = element.getElementsByTagName("score").item(0).getTextContent();
+                    Map<String, String> dataMap = new HashMap<>();
+                    dataMap.put("sid", sid);
+                    dataMap.put("cid", cid);
+                    dataMap.put("score", score);
+                    dataList.add(dataMap);
+                }
+            }
+        } catch (ParserConfigurationException | SAXException | IOException ex) {
+            ex.printStackTrace();
+        }
+        return dataList;
+    }
+
+    public List<Map<String, String>> fetchTeachersData() {
+        List<Map<String, String>> dataList = new ArrayList<>();
+        try {
+            File file = new ClassPathResource(chooseTeachersXMLPath).getFile();
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document doc = db.parse(file);

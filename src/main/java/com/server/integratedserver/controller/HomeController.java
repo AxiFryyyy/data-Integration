@@ -56,6 +56,21 @@ public class HomeController {
         xmlDataList.add(xmlService.fetchClassesData());
         xmlDataList.add(xmlService.fetchStudentsData());
         xmlDataList.add(xmlService.fetchChoicesData());
+        xmlDataList.add(xmlService.fetchTeachersData());
+        modelAndView.addObject("xmlDataList", xmlDataList);
+        System.out.println(xmlDataList);
+        return modelAndView;
+    }
+
+    @GetMapping("/Charts")
+    public ModelAndView chartsPage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("Charts");
+        List<List<Map<String, String>>> xmlDataList = new ArrayList<>();
+        xmlDataList.add(xmlService.fetchClassesData());
+        xmlDataList.add(xmlService.fetchStudentsData());
+        xmlDataList.add(xmlService.fetchChoicesData());
+        xmlDataList.add(xmlService.fetchTeachersData());
         modelAndView.addObject("xmlDataList", xmlDataList);
         System.out.println(xmlDataList);
         return modelAndView;
