@@ -125,18 +125,26 @@ public class XmlService {
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document doc = db.parse(file);
             doc.getDocumentElement().normalize();
-            NodeList nodeList = doc.getElementsByTagName("choice");
+            NodeList nodeList = doc.getElementsByTagName("evaluation");
             for (int i = 0; i < nodeList.getLength(); i++) {
                 Node node = nodeList.item(i);
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
-                    String sid = element.getElementsByTagName("sid").item(0).getTextContent();
-                    String cid = element.getElementsByTagName("cid").item(0).getTextContent();
-                    String score = element.getElementsByTagName("score").item(0).getTextContent();
+                    String id = element.getElementsByTagName("id").item(0).getTextContent();
+                    String teacher = element.getElementsByTagName("teacher").item(0).getTextContent();
+                    String course = element.getElementsByTagName("course").item(0).getTextContent();
+                    String attendence = element.getElementsByTagName("attendence").item(0).getTextContent();
+                    String virtue = element.getElementsByTagName("virtue").item(0).getTextContent();
+                    String teaching = element.getElementsByTagName("teaching").item(0).getTextContent();
+                    String achievement = element.getElementsByTagName("achievement").item(0).getTextContent();
                     Map<String, String> dataMap = new HashMap<>();
-                    dataMap.put("sid", sid);
-                    dataMap.put("cid", cid);
-                    dataMap.put("score", score);
+                    dataMap.put("id", id);
+                    dataMap.put("teacher", teacher);
+                    dataMap.put("course", course);
+                    dataMap.put("attendence", attendence);
+                    dataMap.put("virtue", virtue);
+                    dataMap.put("teaching", teaching);
+                    dataMap.put("achievement", achievement);
                     dataList.add(dataMap);
                 }
             }

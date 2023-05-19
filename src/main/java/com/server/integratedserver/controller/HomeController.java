@@ -52,14 +52,26 @@ public class HomeController {
         xmlDataList.add(xmlService.fetchChoicesData());
         xmlDataList.add(xmlService.fetchTeachersData());
         modelAndView.addObject("xmlDataList", xmlDataList);
-        System.out.println(xmlDataList);
         return modelAndView;
     }
 
-    @GetMapping("/Charts")
-    public ModelAndView chartsPage(){
+    @GetMapping("/classChart")
+    public ModelAndView classChartPage(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("classChart");
+        List<List<Map<String, String>>> xmlDataList = new ArrayList<>();
+        xmlDataList.add(xmlService.fetchClassesData());
+        xmlDataList.add(xmlService.fetchStudentsData());
+        xmlDataList.add(xmlService.fetchChoicesData());
+        xmlDataList.add(xmlService.fetchTeachersData());
+        modelAndView.addObject("xmlDataList", xmlDataList);
+        return modelAndView;
+    }
+
+    @GetMapping("/teacherChart")
+    public ModelAndView teacherChartPage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("teacherChart");
         List<List<Map<String, String>>> xmlDataList = new ArrayList<>();
         xmlDataList.add(xmlService.fetchClassesData());
         xmlDataList.add(xmlService.fetchStudentsData());

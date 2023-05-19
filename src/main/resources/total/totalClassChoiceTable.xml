@@ -3,175 +3,729 @@
     <choice>
         <sid>200010001</sid>
         <cid>5000</cid>
-        <score>100</score>
+        <score>88</score>
     </choice>
     <choice>
         <sid>200010002</sid>
         <cid>5000</cid>
-        <score>80</score>
+        <score>85</score>
     </choice>
     <choice>
         <sid>200010003</sid>
+        <cid>5000</cid>
+        <score>69</score>
+    </choice>
+    <choice>
+        <sid>200010004</sid>
         <cid>5000</cid>
         <score>80</score>
     </choice>
     <choice>
         <sid>200010005</sid>
         <cid>5000</cid>
-        <score>0</score>
+        <score>56</score>
+    </choice>
+    <choice>
+        <sid>200010006</sid>
+        <cid>5000</cid>
+        <score>80</score>
     </choice>
     <choice>
         <sid>200010007</sid>
         <cid>5000</cid>
-        <score>0</score>
+        <score>83</score>
+    </choice>
+    <choice>
+        <sid>200010008</sid>
+        <cid>5000</cid>
+        <score>70</score>
     </choice>
     <choice>
         <sid>200010009</sid>
         <cid>5000</cid>
-        <score>0</score>
+        <score>77</score>
+    </choice>
+    <choice>
+        <sid>200010010</sid>
+        <cid>5000</cid>
+        <score>74</score>
+    </choice>
+    <choice>
+        <sid>200010011</sid>
+        <cid>5000</cid>
+        <score>89</score>
+    </choice>
+    <choice>
+        <sid>200010012</sid>
+        <cid>5000</cid>
+        <score>65</score>
+    </choice>
+    <choice>
+        <sid>200010013</sid>
+        <cid>5000</cid>
+        <score>86</score>
+    </choice>
+    <choice>
+        <sid>200010014</sid>
+        <cid>5000</cid>
+        <score>93</score>
     </choice>
     <choice>
         <sid>200010015</sid>
         <cid>5000</cid>
-        <score>0</score>
+        <score>72</score>
     </choice>
     <choice>
         <sid>200010016</sid>
         <cid>5000</cid>
-        <score>0</score>
+        <score>72</score>
+    </choice>
+    <choice>
+        <sid>200010017</sid>
+        <cid>5000</cid>
+        <score>81</score>
+    </choice>
+    <choice>
+        <sid>200010018</sid>
+        <cid>5000</cid>
+        <score>77</score>
+    </choice>
+    <choice>
+        <sid>200010019</sid>
+        <cid>5000</cid>
+        <score>83</score>
+    </choice>
+    <choice>
+        <sid>200010020</sid>
+        <cid>5000</cid>
+        <score>58</score>
+    </choice>
+    <choice>
+        <sid>200010021</sid>
+        <cid>5000</cid>
+        <score>89</score>
+    </choice>
+    <choice>
+        <sid>200010022</sid>
+        <cid>5000</cid>
+        <score>65</score>
+    </choice>
+    <choice>
+        <sid>200010023</sid>
+        <cid>5000</cid>
+        <score>86</score>
+    </choice>
+    <choice>
+        <sid>200010024</sid>
+        <cid>5000</cid>
+        <score>93</score>
+    </choice>
+    <choice>
+        <sid>200010025</sid>
+        <cid>5000</cid>
+        <score>72</score>
+    </choice>
+    <choice>
+        <sid>200010026</sid>
+        <cid>5000</cid>
+        <score>72</score>
+    </choice>
+    <choice>
+        <sid>200010027</sid>
+        <cid>5000</cid>
+        <score>81</score>
+    </choice>
+    <choice>
+        <sid>200010028</sid>
+        <cid>5000</cid>
+        <score>77</score>
+    </choice>
+    <choice>
+        <sid>200010029</sid>
+        <cid>5000</cid>
+        <score>83</score>
+    </choice>
+    <choice>
+        <sid>200010030</sid>
+        <cid>5000</cid>
+        <score>58</score>
+    </choice>
+    <choice>
+        <sid>200000016</sid>
+        <cid>5000</cid>
+        <score>72</score>
+    </choice>
+    <choice>
+        <sid>200000018</sid>
+        <cid>5000</cid>
+        <score>84</score>
     </choice>
     <choice>
         <sid>100000001</sid>
         <cid>5000</cid>
-        <score>0</score>
-    </choice>
-    <choice>
-        <sid>200010018</sid>
-        <cid>5000</cid>
-        <score>0</score>
+        <score>95</score>
     </choice>
 
     <choice>
+        <sid>200010000</sid>
+        <cid>5001</cid>
+        <score>90</score>
+    </choice>
+    <choice>
         <sid>200010001</sid>
         <cid>5001</cid>
-        <score>0</score>
+        <score>81</score>
     </choice>
     <choice>
         <sid>200010002</sid>
         <cid>5001</cid>
-        <score>0</score>
+        <score>93</score>
+    </choice>
+    <choice>
+        <sid>200010003</sid>
+        <cid>5001</cid>
+        <score>95</score>
+    </choice>
+    <choice>
+        <sid>200010004</sid>
+        <cid>5001</cid>
+        <score>85</score>
+    </choice>
+    <choice>
+        <sid>200010005</sid>
+        <cid>5001</cid>
+        <score>75</score>
     </choice>
     <choice>
         <sid>200010006</sid>
         <cid>5001</cid>
-        <score>0</score>
+        <score>57</score>
+    </choice>
+    <choice>
+        <sid>200010007</sid>
+        <cid>5001</cid>
+        <score>73</score>
+    </choice>
+    <choice>
+        <sid>200010008</sid>
+        <cid>5001</cid>
+        <score>84</score>
     </choice>
     <choice>
         <sid>200010009</sid>
         <cid>5001</cid>
-        <score>0</score>
+        <score>74</score>
     </choice>
     <choice>
         <sid>200010010</sid>
         <cid>5001</cid>
-        <score>0</score>
+        <score>79</score>
+    </choice>
+    <choice>
+        <sid>200010011</sid>
+        <cid>5001</cid>
+        <score>76</score>
+    </choice>
+    <choice>
+        <sid>200010012</sid>
+        <cid>5001</cid>
+        <score>100</score>
+    </choice>
+    <choice>
+        <sid>200010013</sid>
+        <cid>5001</cid>
+        <score>74</score>
+    </choice>
+    <choice>
+        <sid>200010014</sid>
+        <cid>5001</cid>
+        <score>74</score>
+    </choice>
+    <choice>
+        <sid>200010015</sid>
+        <cid>5001</cid>
+        <score>81</score>
+    </choice>
+    <choice>
+        <sid>200010016</sid>
+        <cid>5001</cid>
+        <score>77</score>
+    </choice>
+    <choice>
+        <sid>200010017</sid>
+        <cid>5001</cid>
+        <score>86</score>
     </choice>
     <choice>
         <sid>200010018</sid>
         <cid>5001</cid>
-        <score>0</score>
+        <score>78</score>
+    </choice>
+    <choice>
+        <sid>200010019</sid>
+        <cid>5001</cid>
+        <score>77</score>
     </choice>
     <choice>
         <sid>200010020</sid>
         <cid>5001</cid>
-        <score>0</score>
+        <score>78</score>
     </choice>
     <choice>
-        <sid>200010017</sid>
+        <sid>200010021</sid>
         <cid>5001</cid>
-        <score>0</score>
+        <score>79</score>
     </choice>
     <choice>
-        <sid>200010003</sid>
+        <sid>200010022</sid>
         <cid>5001</cid>
-        <score>0</score>
+        <score>88</score>
     </choice>
     <choice>
-        <sid>200010008</sid>
+        <sid>200010023</sid>
         <cid>5001</cid>
-        <score>0</score>
+        <score>55</score>
     </choice>
     <choice>
-        <sid>200010004</sid>
+        <sid>200010024</sid>
         <cid>5001</cid>
-        <score>0</score>
+        <score>74</score>
     </choice>
     <choice>
-        <sid>200010016</sid>
+        <sid>200010025</sid>
         <cid>5001</cid>
-        <score>0</score>
+        <score>61</score>
     </choice>
     <choice>
-        <sid>123456789</sid>
+        <sid>200010026</sid>
         <cid>5001</cid>
-        <score>0</score>
+        <score>80</score>
+    </choice>
+    <choice>
+        <sid>200010027</sid>
+        <cid>5001</cid>
+        <score>78</score>
+    </choice>
+    <choice>
+        <sid>200010028</sid>
+        <cid>5001</cid>
+        <score>85</score>
+    </choice>
+    <choice>
+        <sid>200010029</sid>
+        <cid>5001</cid>
+        <score>71</score>
+    </choice>
+    <choice>
+        <sid>200010030</sid>
+        <cid>5001</cid>
+        <score>65</score>
+    </choice>
+    <choice>
+        <sid>200010031</sid>
+        <cid>5001</cid>
+        <score>90</score>
+    </choice>
+    <choice>
+        <sid>200010032</sid>
+        <cid>5001</cid>
+        <score>73</score>
+    </choice>
+    <choice>
+        <sid>200010033</sid>
+        <cid>5001</cid>
+        <score>51</score>
+    </choice>
+    <choice>
+        <sid>200010034</sid>
+        <cid>5001</cid>
+        <score>59</score>
+    </choice>
+    <choice>
+        <sid>200010035</sid>
+        <cid>5001</cid>
+        <score>63</score>
+    </choice>
+    <choice>
+        <sid>200010036</sid>
+        <cid>5001</cid>
+        <score>56</score>
+    </choice>
+    <choice>
+        <sid>200010037</sid>
+        <cid>5001</cid>
+        <score>87</score>
+    </choice>
+    <choice>
+        <sid>200010038</sid>
+        <cid>5001</cid>
+        <score>67</score>
+    </choice>
+    <choice>
+        <sid>200010039</sid>
+        <cid>5001</cid>
+        <score>84</score>
+    </choice>
+    <choice>
+        <sid>200010040</sid>
+        <cid>5001</cid>
+        <score>74</score>
+    </choice>
+    <choice>
+        <sid>200010041</sid>
+        <cid>5001</cid>
+        <score>83</score>
+    </choice>
+    <choice>
+        <sid>200010042</sid>
+        <cid>5001</cid>
+        <score>82</score>
+    </choice>
+    <choice>
+        <sid>200010043</sid>
+        <cid>5001</cid>
+        <score>85</score>
+    </choice>
+    <choice>
+        <sid>200010044</sid>
+        <cid>5001</cid>
+        <score>74</score>
+    </choice>
+    <choice>
+        <sid>200010045</sid>
+        <cid>5001</cid>
+        <score>68</score>
+    </choice>
+    <choice>
+        <sid>200010046</sid>
+        <cid>5001</cid>
+        <score>70</score>
+    </choice>
+    <choice>
+        <sid>200010047</sid>
+        <cid>5001</cid>
+        <score>77</score>
+    </choice>
+    <choice>
+        <sid>200010048</sid>
+        <cid>5001</cid>
+        <score>72</score>
+    </choice>
+    <choice>
+        <sid>200010049</sid>
+        <cid>5001</cid>
+        <score>73</score>
+    </choice>
+    <choice>
+        <sid>200010050</sid>
+        <cid>5001</cid>
+        <score>96</score>
+    </choice>
+    <choice>
+        <sid>200000011</sid>
+        <cid>5001</cid>
+        <score>74</score>
+    </choice>
+    <choice>
+        <sid>200000012</sid>
+        <cid>5001</cid>
+        <score>89</score>
+    </choice>
+    <choice>
+        <sid>200000013</sid>
+        <cid>5001</cid>
+        <score>88</score>
+    </choice>
+    <choice>
+        <sid>200000014</sid>
+        <cid>5001</cid>
+        <score>71</score>
+    </choice>
+    <choice>
+        <sid>200000015</sid>
+        <cid>5001</cid>
+        <score>63</score>
+    </choice>
+    <choice>
+        <sid>200000016</sid>
+        <cid>5001</cid>
+        <score>66</score>
+    </choice>
+    <choice>
+        <sid>200000017</sid>
+        <cid>5001</cid>
+        <score>84</score>
+    </choice>
+    <choice>
+        <sid>200000018</sid>
+        <cid>5001</cid>
+        <score>81</score>
+    </choice>
+    <choice>
+        <sid>200000019</sid>
+        <cid>5001</cid>
+        <score>80</score>
+    </choice>
+    <choice>
+        <sid>200000020</sid>
+        <cid>5001</cid>
+        <score>93</score>
     </choice>
 
     <choice>
         <sid>200010000</sid>
         <cid>5002</cid>
-        <score>0</score>
+        <score>42</score>
     </choice>
     <choice>
-        <sid>200010007</sid>
+        <sid>200010001</sid>
         <cid>5002</cid>
-        <score>0</score>
+        <score>88</score>
     </choice>
     <choice>
-        <sid>200010008</sid>
+        <sid>200010002</sid>
         <cid>5002</cid>
-        <score>0</score>
-    </choice>
-    <choice>
-        <sid>200010009</sid>
-        <cid>5002</cid>
-        <score>0</score>
-    </choice>
-
-    <choice>
-        <sid>200010010</sid>
-        <cid>5002</cid>
-        <score>0</score>
-    </choice>
-    <choice>
-        <sid>200010011</sid>
-        <cid>5002</cid>
-        <score>0</score>
-    </choice>
-    <choice>
-        <sid>200010012</sid>
-        <cid>5002</cid>
-        <score>0</score>
-    </choice>
-    <choice>
-        <sid>200010013</sid>
-        <cid>5002</cid>
-        <score>0</score>
-    </choice>
-    <choice>
-        <sid>200010016</sid>
-        <cid>5002</cid>
-        <score>0</score>
-    </choice>
-    <choice>
-        <sid>200010019</sid>
-        <cid>5002</cid>
-        <score>0</score>
+        <score>70</score>
     </choice>
     <choice>
         <sid>200010003</sid>
         <cid>5002</cid>
-        <score>0</score>
+        <score>73</score>
+    </choice>
+    <choice>
+        <sid>200010004</sid>
+        <cid>5002</cid>
+        <score>70</score>
+    </choice>
+    <choice>
+        <sid>200010005</sid>
+        <cid>5002</cid>
+        <score>57</score>
+    </choice>
+    <choice>
+        <sid>200010006</sid>
+        <cid>5002</cid>
+        <score>85</score>
+    </choice>
+    <choice>
+        <sid>200010007</sid>
+        <cid>5002</cid>
+        <score>74</score>
+    </choice>
+    <choice>
+        <sid>200010008</sid>
+        <cid>5002</cid>
+        <score>74</score>
+    </choice>
+    <choice>
+        <sid>200010009</sid>
+        <cid>5002</cid>
+        <score>63</score>
+    </choice>
+    <choice>
+        <sid>200010010</sid>
+        <cid>5002</cid>
+        <score>85</score>
+    </choice>
+    <choice>
+        <sid>200010011</sid>
+        <cid>5002</cid>
+        <score>62</score>
+    </choice>
+    <choice>
+        <sid>200010012</sid>
+        <cid>5002</cid>
+        <score>68</score>
+    </choice>
+    <choice>
+        <sid>200010013</sid>
+        <cid>5002</cid>
+        <score>65</score>
+    </choice>
+    <choice>
+        <sid>200010014</sid>
+        <cid>5002</cid>
+        <score>62</score>
+    </choice>
+    <choice>
+        <sid>200010015</sid>
+        <cid>5002</cid>
+        <score>93</score>
+    </choice>
+    <choice>
+        <sid>200010016</sid>
+        <cid>5002</cid>
+        <score>61</score>
+    </choice>
+    <choice>
+        <sid>200010017</sid>
+        <cid>5002</cid>
+        <score>67</score>
+    </choice>
+    <choice>
+        <sid>200010018</sid>
+        <cid>5002</cid>
+        <score>89</score>
+    </choice>
+    <choice>
+        <sid>200010019</sid>
+        <cid>5002</cid>
+        <score>48</score>
+    </choice>
+    <choice>
+        <sid>200010020</sid>
+        <cid>5002</cid>
+        <score>73</score>
+    </choice>
+    <choice>
+        <sid>200010021</sid>
+        <cid>5002</cid>
+        <score>86</score>
+    </choice>
+    <choice>
+        <sid>200010022</sid>
+        <cid>5002</cid>
+        <score>76</score>
+    </choice>
+    <choice>
+        <sid>200010023</sid>
+        <cid>5002</cid>
+        <score>53</score>
+    </choice>
+    <choice>
+        <sid>200010024</sid>
+        <cid>5002</cid>
+        <score>68</score>
+    </choice>
+    <choice>
+        <sid>200010025</sid>
+        <cid>5002</cid>
+        <score>89</score>
+    </choice>
+    <choice>
+        <sid>200010026</sid>
+        <cid>5002</cid>
+        <score>80</score>
+    </choice>
+    <choice>
+        <sid>200010027</sid>
+        <cid>5002</cid>
+        <score>80</score>
+    </choice>
+    <choice>
+        <sid>200010028</sid>
+        <cid>5002</cid>
+        <score>69</score>
+    </choice>
+    <choice>
+        <sid>200010029</sid>
+        <cid>5002</cid>
+        <score>71</score>
+    </choice>
+    <choice>
+        <sid>200010030</sid>
+        <cid>5002</cid>
+        <score>78</score>
+    </choice>
+    <choice>
+        <sid>200010031</sid>
+        <cid>5002</cid>
+        <score>61</score>
+    </choice>
+    <choice>
+        <sid>200010032</sid>
+        <cid>5002</cid>
+        <score>57</score>
+    </choice>
+    <choice>
+        <sid>200010033</sid>
+        <cid>5002</cid>
+        <score>51</score>
+    </choice>
+    <choice>
+        <sid>200010034</sid>
+        <cid>5002</cid>
+        <score>65</score>
+    </choice>
+    <choice>
+        <sid>200010035</sid>
+        <cid>5002</cid>
+        <score>71</score>
+    </choice>
+    <choice>
+        <sid>200010036</sid>
+        <cid>5002</cid>
+        <score>74</score>
+    </choice>
+    <choice>
+        <sid>200010037</sid>
+        <cid>5002</cid>
+        <score>74</score>
+    </choice>
+    <choice>
+        <sid>200010038</sid>
+        <cid>5002</cid>
+        <score>77</score>
+    </choice>
+    <choice>
+        <sid>200010039</sid>
+        <cid>5002</cid>
+        <score>81</score>
+    </choice>
+    <choice>
+        <sid>200010040</sid>
+        <cid>5002</cid>
+        <score>74</score>
+    </choice>
+    <choice>
+        <sid>200010041</sid>
+        <cid>5002</cid>
+        <score>61</score>
+    </choice>
+    <choice>
+        <sid>200010042</sid>
+        <cid>5002</cid>
+        <score>54</score>
+    </choice>
+    <choice>
+        <sid>200010043</sid>
+        <cid>5002</cid>
+        <score>75</score>
+    </choice>
+    <choice>
+        <sid>200010044</sid>
+        <cid>5002</cid>
+        <score>66</score>
+    </choice>
+    <choice>
+        <sid>200010045</sid>
+        <cid>5002</cid>
+        <score>53</score>
+    </choice>
+    <choice>
+        <sid>200010046</sid>
+        <cid>5002</cid>
+        <score>87</score>
+    </choice>
+    <choice>
+        <sid>200010047</sid>
+        <cid>5002</cid>
+        <score>94</score>
+    </choice>
+    <choice>
+        <sid>200010048</sid>
+        <cid>5002</cid>
+        <score>92</score>
+    </choice>
+    <choice>
+        <sid>200010049</sid>
+        <cid>5002</cid>
+        <score>78</score>
+    </choice>
+    <choice>
+        <sid>200010050</sid>
+        <cid>5002</cid>
+        <score>68</score>
     </choice>
 
     <choice>
@@ -347,11 +901,6 @@
         <cid>5005</cid>
         <score>0</score>
     </choice>
-    <choice>
-        <sid>123456789</sid>
-        <cid>5005</cid>
-        <score>0</score>
-    </choice>
 
     <choice>
         <sid>200010000</sid>
@@ -365,11 +914,6 @@
     </choice>
     <choice>
         <sid>200010013</sid>
-        <cid>5006</cid>
-        <score>0</score>
-    </choice>
-    <choice>
-        <sid>123456789</sid>
         <cid>5006</cid>
         <score>0</score>
     </choice>
@@ -476,11 +1020,6 @@
         <score>0</score>
     </choice>
     <choice>
-        <sid>123456789</sid>
-        <cid>5008</cid>
-        <score>0</score>
-    </choice>
-    <choice>
         <sid>200010019</sid>
         <cid>5008</cid>
         <score>0</score>
@@ -488,74 +1027,74 @@
     <choice>
         <sid>200010002</sid>
         <cid>5008</cid>
-        <score>0</score>
+        <score>36</score>
     </choice>
     <choice>
         <sid>200010006</sid>
         <cid>5008</cid>
-        <score>0</score>
+        <score>89</score>
     </choice>
 
     <choice>
         <sid>200010006</sid>
         <cid>5009</cid>
-        <score>0</score>
+        <score>86</score>
     </choice>
     <choice>
         <sid>200010012</sid>
         <cid>5009</cid>
-        <score>0</score>
+        <score>85</score>
     </choice>
     <choice>
         <sid>200010016</sid>
         <cid>5009</cid>
-        <score>0</score>
+        <score>83</score>
     </choice>
     <choice>
         <sid>200010001</sid>
         <cid>5009</cid>
-        <score>0</score>
+        <score>76</score>
     </choice>
     <choice>
         <sid>200010007</sid>
         <cid>5009</cid>
-        <score>0</score>
+        <score>78</score>
     </choice>
     <choice>
         <sid>200010015</sid>
         <cid>5009</cid>
-        <score>0</score>
+        <score>80</score>
     </choice>
     <choice>
         <sid>200010018</sid>
         <cid>5009</cid>
-        <score>0</score>
+        <score>69</score>
     </choice>
     <choice>
         <sid>200010005</sid>
         <cid>5009</cid>
-        <score>0</score>
+        <score>52</score>
     </choice>
 
     <choice>
         <sid>200010001</sid>
         <cid>10001</cid>
-        <score>0</score>
+        <score>83</score>
     </choice>
     <choice>
         <sid>200010000</sid>
         <cid>10001</cid>
-        <score>null</score>
+        <score>70</score>
     </choice>
     <choice>
         <sid>200000008</sid>
         <cid>10001</cid>
-        <score>15</score>
+        <score>85</score>
     </choice>
     <choice>
         <sid>200000005</sid>
         <cid>10001</cid>
-        <score>47</score>
+        <score>67</score>
     </choice>
     <choice>
         <sid>200000001</sid>
@@ -565,59 +1104,419 @@
     <choice>
         <sid>200000002</sid>
         <cid>10001</cid>
-        <score>03</score>
+        <score>73</score>
     </choice>
 
     <choice>
-        <sid>200010000</sid>
-        <cid>10002</cid>
-        <score>null</score>
-    </choice>
-    <choice>
         <sid>200000000</sid>
         <cid>10002</cid>
-        <score>98</score>
-    </choice>
-    <choice>
-        <sid>200000006</sid>
-        <cid>10002</cid>
-        <score>97</score>
-    </choice>
-    <choice>
-        <sid>200000009</sid>
-        <cid>10002</cid>
-        <score>93</score>
-    </choice>
-    <choice>
-        <sid>200000004</sid>
-        <cid>10002</cid>
-        <score>97</score>
-    </choice>
-    <choice>
-        <sid>200000007</sid>
-        <cid>10002</cid>
-        <score>02</score>
-    </choice>
-    <choice>
-        <sid>200000002</sid>
-        <cid>10002</cid>
-        <score>01</score>
+        <score>71</score>
     </choice>
     <choice>
         <sid>200000001</sid>
         <cid>10002</cid>
-        <score>08</score>
+        <score>84</score>
+    </choice>
+    <choice>
+        <sid>200000002</sid>
+        <cid>10002</cid>
+        <score>70</score>
     </choice>
     <choice>
         <sid>200000003</sid>
         <cid>10002</cid>
-        <score>58</score>
+        <score>69</score>
+    </choice>
+    <choice>
+        <sid>200000004</sid>
+        <cid>10002</cid>
+        <score>90</score>
+    </choice>
+    <choice>
+        <sid>200000005</sid>
+        <cid>10002</cid>
+        <score>71</score>
+    </choice>
+    <choice>
+        <sid>200000006</sid>
+        <cid>10002</cid>
+        <score>77</score>
+    </choice>
+    <choice>
+        <sid>200000007</sid>
+        <cid>10002</cid>
+        <score>90</score>
+    </choice>
+    <choice>
+        <sid>200000008</sid>
+        <cid>10002</cid>
+        <score>93</score>
+    </choice>
+    <choice>
+        <sid>200000009</sid>
+        <cid>10002</cid>
+        <score>78</score>
+    </choice>
+    <choice>
+        <sid>200000010</sid>
+        <cid>10002</cid>
+        <score>65</score>
+    </choice>
+    <choice>
+        <sid>200000011</sid>
+        <cid>10002</cid>
+        <score>76</score>
+    </choice>
+    <choice>
+        <sid>200000012</sid>
+        <cid>10002</cid>
+        <score>93</score>
+    </choice>
+    <choice>
+        <sid>200000013</sid>
+        <cid>10002</cid>
+        <score>91</score>
+    </choice>
+    <choice>
+        <sid>200000014</sid>
+        <cid>10002</cid>
+        <score>87</score>
+    </choice>
+    <choice>
+        <sid>200000015</sid>
+        <cid>10002</cid>
+        <score>100</score>
+    </choice>
+    <choice>
+        <sid>200000016</sid>
+        <cid>10002</cid>
+        <score>70</score>
+    </choice>
+    <choice>
+        <sid>200000017</sid>
+        <cid>10002</cid>
+        <score>91</score>
+    </choice>
+    <choice>
+        <sid>200000018</sid>
+        <cid>10002</cid>
+        <score>63</score>
+    </choice>
+    <choice>
+        <sid>200000019</sid>
+        <cid>10002</cid>
+        <score>82</score>
+    </choice>
+    <choice>
+        <sid>200000020</sid>
+        <cid>10002</cid>
+        <score>77</score>
+    </choice>
+    <choice>
+        <sid>200000021</sid>
+        <cid>10002</cid>
+        <score>76</score>
+    </choice>
+    <choice>
+        <sid>200000022</sid>
+        <cid>10002</cid>
+        <score>66</score>
+    </choice>
+    <choice>
+        <sid>200000023</sid>
+        <cid>10002</cid>
+        <score>84</score>
+    </choice>
+    <choice>
+        <sid>200000024</sid>
+        <cid>10002</cid>
+        <score>73</score>
+    </choice>
+    <choice>
+        <sid>200000025</sid>
+        <cid>10002</cid>
+        <score>75</score>
+    </choice>
+    <choice>
+        <sid>200000026</sid>
+        <cid>10002</cid>
+        <score>82</score>
+    </choice>
+    <choice>
+        <sid>200000027</sid>
+        <cid>10002</cid>
+        <score>92</score>
+    </choice>
+    <choice>
+        <sid>200000028</sid>
+        <cid>10002</cid>
+        <score>70</score>
+    </choice>
+    <choice>
+        <sid>200000029</sid>
+        <cid>10002</cid>
+        <score>89</score>
+    </choice>
+    <choice>
+        <sid>200000030</sid>
+        <cid>10002</cid>
+        <score>80</score>
+    </choice>
+    <choice>
+        <sid>200000031</sid>
+        <cid>10002</cid>
+        <score>64</score>
+    </choice>
+    <choice>
+        <sid>200000032</sid>
+        <cid>10002</cid>
+        <score>79</score>
+    </choice>
+    <choice>
+        <sid>200000033</sid>
+        <cid>10002</cid>
+        <score>67</score>
+    </choice>
+    <choice>
+        <sid>200000034</sid>
+        <cid>10002</cid>
+        <score>83</score>
+    </choice>
+    <choice>
+        <sid>200000035</sid>
+        <cid>10002</cid>
+        <score>77</score>
+    </choice>
+    <choice>
+        <sid>200000036</sid>
+        <cid>10002</cid>
+        <score>54</score>
+    </choice>
+    <choice>
+        <sid>200000037</sid>
+        <cid>10002</cid>
+        <score>81</score>
+    </choice>
+    <choice>
+        <sid>200000038</sid>
+        <cid>10002</cid>
+        <score>84</score>
+    </choice>
+    <choice>
+        <sid>200000039</sid>
+        <cid>10002</cid>
+        <score>70</score>
+    </choice>
+    <choice>
+        <sid>200000040</sid>
+        <cid>10002</cid>
+        <score>72</score>
+    </choice>
+    <choice>
+        <sid>200000041</sid>
+        <cid>10002</cid>
+        <score>66</score>
+    </choice>
+    <choice>
+        <sid>200000042</sid>
+        <cid>10002</cid>
+        <score>63</score>
+    </choice>
+    <choice>
+        <sid>200000043</sid>
+        <cid>10002</cid>
+        <score>94</score>
+    </choice>
+    <choice>
+        <sid>200000044</sid>
+        <cid>10002</cid>
+        <score>75</score>
+    </choice>
+    <choice>
+        <sid>200000045</sid>
+        <cid>10002</cid>
+        <score>89</score>
+    </choice>
+    <choice>
+        <sid>200000046</sid>
+        <cid>10002</cid>
+        <score>83</score>
+    </choice>
+    <choice>
+        <sid>200000047</sid>
+        <cid>10002</cid>
+        <score>59</score>
+    </choice>
+    <choice>
+        <sid>200000048</sid>
+        <cid>10002</cid>
+        <score>67</score>
+    </choice>
+    <choice>
+        <sid>200000049</sid>
+        <cid>10002</cid>
+        <score>65</score>
+    </choice>
+    <choice>
+        <sid>200000050</sid>
+        <cid>10002</cid>
+        <score>65</score>
+    </choice>
+    <choice>
+        <sid>200010001</sid>
+        <cid>10002</cid>
+        <score>71</score>
+    </choice>
+    <choice>
+        <sid>200010002</sid>
+        <cid>10002</cid>
+        <score>84</score>
+    </choice>
+    <choice>
+        <sid>200010003</sid>
+        <cid>10002</cid>
+        <score>67</score>
+    </choice>
+    <choice>
+        <sid>200010004</sid>
+        <cid>10002</cid>
+        <score>84</score>
+    </choice>
+    <choice>
+        <sid>200010005</sid>
+        <cid>10002</cid>
+        <score>81</score>
+    </choice>
+    <choice>
+        <sid>200010006</sid>
+        <cid>10002</cid>
+        <score>88</score>
+    </choice>
+    <choice>
+        <sid>200010007</sid>
+        <cid>10002</cid>
+        <score>72</score>
+    </choice>
+    <choice>
+        <sid>200010008</sid>
+        <cid>10002</cid>
+        <score>88</score>
+    </choice>
+    <choice>
+        <sid>200010009</sid>
+        <cid>10002</cid>
+        <score>74</score>
+    </choice>
+    <choice>
+        <sid>200010010</sid>
+        <cid>10002</cid>
+        <score>92</score>
+    </choice>
+    <choice>
+        <sid>200010021</sid>
+        <cid>10002</cid>
+        <score>74</score>
+    </choice>
+    <choice>
+        <sid>200010022</sid>
+        <cid>10002</cid>
+        <score>93</score>
+    </choice>
+    <choice>
+        <sid>200010033</sid>
+        <cid>10002</cid>
+        <score>62</score>
+    </choice>
+    <choice>
+        <sid>200010044</sid>
+        <cid>10002</cid>
+        <score>91</score>
+    </choice>
+    <choice>
+        <sid>200010045</sid>
+        <cid>10002</cid>
+        <score>62</score>
+    </choice>
+    <choice>
+        <sid>200010036</sid>
+        <cid>10002</cid>
+        <score>75</score>
+    </choice>
+    <choice>
+        <sid>200010027</sid>
+        <cid>10002</cid>
+        <score>78</score>
+    </choice>
+    <choice>
+        <sid>200010028</sid>
+        <cid>10002</cid>
+        <score>96</score>
+    </choice>
+    <choice>
+        <sid>200010019</sid>
+        <cid>10002</cid>
+        <score>81</score>
+    </choice>
+    <choice>
+        <sid>200010013</sid>
+        <cid>10002</cid>
+        <score>85</score>
+    </choice>
+    <choice>
+        <sid>200010031</sid>
+        <cid>10002</cid>
+        <score>42</score>
+    </choice>
+    <choice>
+        <sid>200010042</sid>
+        <cid>10002</cid>
+        <score>77</score>
+    </choice>
+    <choice>
+        <sid>200010043</sid>
+        <cid>10002</cid>
+        <score>68</score>
+    </choice>
+    <choice>
+        <sid>100000004</sid>
+        <cid>10002</cid>
+        <score>95</score>
+    </choice>
+    <choice>
+        <sid>100000035</sid>
+        <cid>10002</cid>
+        <score>73</score>
+    </choice>
+    <choice>
+        <sid>100000006</sid>
+        <cid>10002</cid>
+        <score>69</score>
+    </choice>
+    <choice>
+        <sid>100000027</sid>
+        <cid>10002</cid>
+        <score>88</score>
+    </choice>
+    <choice>
+        <sid>100000008</sid>
+        <cid>10002</cid>
+        <score>79</score>
+    </choice>
+    <choice>
+        <sid>100000019</sid>
+        <cid>10002</cid>
+        <score>69</score>
+    </choice>
+    <choice>
+        <sid>100000010</sid>
+        <cid>10002</cid>
+        <score>83</score>
     </choice>
 
     <choice>
         <sid>200000009</sid>
         <cid>10003</cid>
-        <score>07</score>
+        <score>67</score>
     </choice>
     <choice>
         <sid>200000006</sid>
@@ -643,7 +1542,7 @@
     <choice>
         <sid>200000000</sid>
         <cid>10004</cid>
-        <score>27</score>
+        <score>87</score>
     </choice>
     <choice>
         <sid>200000001</sid>
@@ -664,28 +1563,28 @@
     <choice>
         <sid>200000008</sid>
         <cid>10005</cid>
-        <score>12</score>
+        <score>52</score>
     </choice>
     <choice>
         <sid>200000009</sid>
         <cid>10005</cid>
-        <score>28</score>
+        <score>68</score>
     </choice>
     <choice>
         <sid>200000004</sid>
         <cid>10005</cid>
-        <score>62</score>
+        <score>92</score>
     </choice>
     <choice>
         <sid>200000007</sid>
         <cid>10005</cid>
-        <score>14</score>
+        <score>74</score>
     </choice>
 
     <choice>
         <sid>200010000</sid>
         <cid>10006</cid>
-        <score>0</score>
+        <score>84</score>
     </choice>
     <choice>
         <sid>200000007</sid>
@@ -695,7 +1594,7 @@
     <choice>
         <sid>200000003</sid>
         <cid>10006</cid>
-        <score>07</score>
+        <score>77</score>
     </choice>
     <choice>
         <sid>200000005</sid>
@@ -711,7 +1610,7 @@
     <choice>
         <sid>200000008</sid>
         <cid>10007</cid>
-        <score>03</score>
+        <score>63</score>
     </choice>
     <choice>
         <sid>200000002</sid>
@@ -721,12 +1620,12 @@
     <choice>
         <sid>200000003</sid>
         <cid>10007</cid>
-        <score>33</score>
+        <score>83</score>
     </choice>
     <choice>
         <sid>200000006</sid>
         <cid>10007</cid>
-        <score>47</score>
+        <score>77</score>
     </choice>
     <choice>
         <sid>200000000</sid>
@@ -736,7 +1635,7 @@
     <choice>
         <sid>200000007</sid>
         <cid>10007</cid>
-        <score>24</score>
+        <score>64</score>
     </choice>
 
     <choice>
@@ -758,12 +1657,12 @@
     <choice>
         <sid>200000009</sid>
         <cid>10008</cid>
-        <score>19</score>
+        <score>79</score>
     </choice>
     <choice>
         <sid>200000000</sid>
         <cid>10008</cid>
-        <score>00</score>
+        <score>84</score>
     </choice>
     <choice>
         <sid>200000001</sid>
@@ -774,17 +1673,17 @@
     <choice>
         <sid>200000000</sid>
         <cid>10009</cid>
-        <score>26</score>
+        <score>86</score>
     </choice>
     <choice>
         <sid>200000001</sid>
         <cid>10009</cid>
-        <score>47</score>
+        <score>77</score>
     </choice>
     <choice>
         <sid>200000002</sid>
         <cid>10009</cid>
-        <score>48</score>
+        <score>75</score>
     </choice>
     <choice>
         <sid>200000007</sid>
@@ -794,17 +1693,17 @@
     <choice>
         <sid>200000005</sid>
         <cid>10009</cid>
-        <score>18</score>
+        <score>78</score>
     </choice>
     <choice>
         <sid>200000009</sid>
         <cid>10009</cid>
-        <score>18</score>
+        <score>68</score>
     </choice>
     <choice>
         <sid>200000004</sid>
         <cid>10009</cid>
-        <score>06</score>
+        <score>86</score>
     </choice>
     <choice>
         <sid>200000003</sid>
@@ -815,7 +1714,7 @@
     <choice>
         <sid>200000001</sid>
         <cid>10010</cid>
-        <score>null</score>
+        <score>71</score>
     </choice>
     <choice>
         <sid>200000006</sid>
@@ -825,7 +1724,7 @@
     <choice>
         <sid>200000004</sid>
         <cid>10010</cid>
-        <score>06</score>
+        <score>76</score>
     </choice>
     <choice>
         <sid>200000000</sid>
@@ -856,7 +1755,7 @@
     <choice>
         <sid>200000005</sid>
         <cid>10012</cid>
-        <score>03</score>
+        <score>83</score>
     </choice>
     <choice>
         <sid>200000009</sid>
@@ -871,18 +1770,18 @@
     <choice>
         <sid>200000004</sid>
         <cid>10012</cid>
-        <score>31</score>
+        <score>41</score>
     </choice>
     <choice>
         <sid>200000001</sid>
         <cid>10012</cid>
-        <score>00</score>
+        <score>70</score>
     </choice>
 
     <choice>
         <sid>200000009</sid>
         <cid>10014</cid>
-        <score>42</score>
+        <score>62</score>
     </choice>
     <choice>
         <sid>200000006</sid>
@@ -902,28 +1801,28 @@
     <choice>
         <sid>200000000</sid>
         <cid>10014</cid>
-        <score>38</score>
+        <score>88</score>
     </choice>
     <choice>
         <sid>200000008</sid>
         <cid>10014</cid>
-        <score>10</score>
+        <score>70</score>
     </choice>
 
     <choice>
         <sid>200000002</sid>
         <cid>10015</cid>
-        <score>01</score>
+        <score>91</score>
     </choice>
     <choice>
         <sid>200000009</sid>
         <cid>10015</cid>
-        <score>28</score>
+        <score>68</score>
     </choice>
     <choice>
         <sid>200000007</sid>
         <cid>10015</cid>
-        <score>16</score>
+        <score>76</score>
     </choice>
     <choice>
         <sid>200000006</sid>
@@ -933,7 +1832,7 @@
     <choice>
         <sid>200000008</sid>
         <cid>10015</cid>
-        <score>06</score>
+        <score>86</score>
     </choice>
     <choice>
         <sid>200000005</sid>
@@ -948,7 +1847,7 @@
     <choice>
         <sid>200000001</sid>
         <cid>10015</cid>
-        <score>25</score>
+        <score>65</score>
     </choice>
 
     <choice>
@@ -959,7 +1858,7 @@
     <choice>
         <sid>200000008</sid>
         <cid>10016</cid>
-        <score>13</score>
+        <score>53</score>
     </choice>
     <choice>
         <sid>200000002</sid>
@@ -1006,7 +1905,7 @@
     <choice>
         <sid>200000003</sid>
         <cid>10020</cid>
-        <score>47</score>
+        <score>77</score>
     </choice>
     <choice>
         <sid>200000008</sid>
@@ -1017,27 +1916,27 @@
     <choice>
         <sid>200010000</sid>
         <cid>10021</cid>
-        <score>0</score>
+        <score>100</score>
     </choice>
     <choice>
         <sid>200000005</sid>
         <cid>10021</cid>
-        <score>01</score>
+        <score>91</score>
     </choice>
     <choice>
         <sid>200000007</sid>
         <cid>10021</cid>
-        <score>42</score>
+        <score>82</score>
     </choice>
     <choice>
         <sid>200000008</sid>
         <cid>10021</cid>
-        <score>32</score>
+        <score>72</score>
     </choice>
     <choice>
         <sid>200000002</sid>
         <cid>10021</cid>
-        <score>07</score>
+        <score>67</score>
     </choice>
     <choice>
         <sid>200000003</sid>
@@ -1053,38 +1952,38 @@
     <choice>
         <sid>200000009</sid>
         <cid>10022</cid>
-        <score>32</score>
+        <score>82</score>
     </choice>
     <choice>
         <sid>200000007</sid>
         <cid>10022</cid>
-        <score>45</score>
+        <score>85</score>
     </choice>
     <choice>
         <sid>200000001</sid>
         <cid>10022</cid>
-        <score>07</score>
+        <score>87</score>
     </choice>
     <choice>
         <sid>200000005</sid>
         <cid>10022</cid>
-        <score>45</score>
+        <score>75</score>
     </choice>
     <choice>
         <sid>200000000</sid>
         <cid>10022</cid>
-        <score>11</score>
+        <score>51</score>
     </choice>
     <choice>
         <sid>200000006</sid>
         <cid>10022</cid>
-        <score>27</score>
+        <score>67</score>
     </choice>
 
     <choice>
         <sid>200000009</sid>
         <cid>10023</cid>
-        <score>41</score>
+        <score>81</score>
     </choice>
     <choice>
         <sid>200000001</sid>
@@ -1120,7 +2019,7 @@
     <choice>
         <sid>200000009</sid>
         <cid>10027</cid>
-        <score>26</score>
+        <score>56</score>
     </choice>
     <choice>
         <sid>200000007</sid>
@@ -1135,23 +2034,23 @@
     <choice>
         <sid>200000000</sid>
         <cid>10027</cid>
-        <score>48</score>
+        <score>68</score>
     </choice>
 
     <choice>
         <sid>200000008</sid>
         <cid>10029</cid>
-        <score>27</score>
+        <score>87</score>
     </choice>
     <choice>
         <sid>200000004</sid>
         <cid>10029</cid>
-        <score>15</score>
+        <score>75</score>
     </choice>
     <choice>
         <sid>200000005</sid>
         <cid>10029</cid>
-        <score>26</score>
+        <score>46</score>
     </choice>
     <choice>
         <sid>200000007</sid>
@@ -1167,17 +2066,17 @@
     <choice>
         <sid>200010000</sid>
         <cid>3000</cid>
-        <score>0</score>
+        <score>92</score>
     </choice>
 
     <choice>
         <sid>200010000</sid>
         <cid>3001</cid>
-        <score>0</score>
+        <score>85</score>
     </choice>
     <choice>
         <sid>200010001</sid>
         <cid>3001</cid>
-        <score>0</score>
+        <score>79</score>
     </choice>
 </choices>
