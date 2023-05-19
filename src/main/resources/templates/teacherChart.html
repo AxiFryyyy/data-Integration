@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>charts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.common.min.js" integrity="sha512-Zo4VYLfEAz0Vxyiohkl7bCDIWl2uQ8yZc/StiJ8RFEK6ms5eXtvOOErLhnGHxuTO1+r3jGBWAzU4wu1AK2aTRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<div id="teacherRatePie" style="width: 600px;height:400px;"></div>
+<script th:inline="javascript">
+    var xmlDataList = [[${xmlDataList}]]
+    var classList = xmlDataList[0]
+    var studentList = xmlDataList[1]
+    var choiceList = xmlDataList[2]
+    var teacherList = xmlDataList[3]
+
+
+    var teacherRatePie = echarts.init(document.getElementById('teacherRatePie')); //显示教师评估信息
+
+    var optionTeacherRatePie = {
+        title: {
+            text: '教师评价',
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'item'
+        },
+        series: [
+            {
+                color: [
+                    '#5a70c7',
+                    '#98cc72',
+                    '#f5c854',
+                    '#22a6b3',
+                    'rgba(0, 0, 0, 0)'
+                ],
+                tooltip: {},
+                type: 'pie',
+                data: [
+                    {
+                        value: 20,
+                        name: '出勤情况'
+                    },
+                    {
+                        value: 20,
+                        name: '师德表现'
+                    },
+                    {
+                        value: 20,
+                        name: '教学教研'
+                    },
+                    {
+                        value: 20,
+                        name:'工作成绩'
+                    },
+                    {
+                        value: 20, //100 - 以上几项的分数
+                    }
+                ]
+            }
+        ]
+    };
+
+    teacherRatePie.setOption(optionTeacherRatePie)
+</script>
+</body>
+</html>

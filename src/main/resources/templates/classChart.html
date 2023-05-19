@@ -11,7 +11,6 @@
 <div id="singleClassScoreBar" style="width: 1000px;height:400px;"></div>
 <div id="singleClassScorePie" style="width: 600px;height:400px;"></div>
 <div id="allClassInfoBar" style="width: 600px;height:400px;"></div>
-<div id="teacherRatePie" style="width: 600px;height:400px;"></div>
 
 <script th:inline="javascript">
     var xmlDataList = [[${xmlDataList}]]
@@ -55,7 +54,6 @@
     var singleClassScoreBar = echarts.init(document.getElementById('singleClassScoreBar')); // 查找课程名，显示单门课信息
     var singleClassScorePie = echarts.init(document.getElementById('singleClassScorePie'));
     var allClassInfoBar = echarts.init(document.getElementById('allClassInfoBar')); //显示多门课程的成绩及选课信息
-    var teacherRatePie = echarts.init(document.getElementById('teacherRatePie')); //显示教师评估信息
     // 指定图表的配置项和数据
     var optionSingleClassScoreBar = {
         title: {
