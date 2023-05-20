@@ -7,81 +7,81 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.common.min.js" integrity="sha512-Zo4VYLfEAz0Vxyiohkl7bCDIWl2uQ8yZc/StiJ8RFEK6ms5eXtvOOErLhnGHxuTO1+r3jGBWAzU4wu1AK2aTRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-<input type="text" id="className" placeholder="输入教师姓名">
-<button id="myButton">确认</button>
-<div id="teacherRateBar" style="width: 600px;height:400px;"></div>
-<script th:inline="javascript">
-    const myInput = document.getElementById("className");
-    const myButton = document.getElementById("myButton");
-    var inputValue
-
-    var xmlDataList = [[${xmlDataList}]]
-    var classList = xmlDataList[0]
-    var studentList = xmlDataList[1]
-    var choiceList = xmlDataList[2]
-    var teacherList = xmlDataList[3]
-    function getCoursesByTeacher(teacher,arr) {
-        var infos = [];
-        // 遍历数据，找到所有该老师任教的课程
-        for (var i = 0; i < arr.length; i++) {
-            if (arr[i].teacher == teacher) {
-                infos.push({
-                    course: arr[i].course,
-                    achievement: arr[i].achievement,
-                    teaching: arr[i].teaching,
-                    attendence: arr[i].attendence,
-                    virtue: arr[i].virtue
-                });
-            }
-        }
-        return infos;
-    }
-
-    myButton.addEventListener("click", function() {
-        inputValue = myInput.value;
-        var teacherName = inputValue;
-        var infos = getCoursesByTeacher(teacherName,teacherList)
-        var teacherRateBar = echarts.init(document.getElementById('teacherRateBar'));
-        var optionTeacherRateBar = {
-            title: {
-                text: '教师评价信息'
-            },
-            tooltip: {},
-            legend: {
-                data: ['出勤情况', '师德表现', '教学教研', '工作成绩']
-            },
-            grid: {
-                containLabel: true
-            },
-            xAxis: {},
-            yAxis: {
-                data: infos.map(obj => obj.course)
-            },
-            series: [
-                {
-                    name: '出勤情况',
-                    type: 'bar',
-                    data: infos.map(obj => obj.attendence)
-                },
-                {
-                    name: '师德表现',
-                    type: 'bar',
-                    data: infos.map(obj => obj.virtue)
-                },
-                {
-                    name: '教学教研',
-                    type: 'bar',
-                    data: infos.map(obj => obj.teaching)
-                },
-                {
-                    name: '工作成绩',
-                    type: 'bar',
-                    data: infos.map(obj => obj.achievement)
+    <div class="container">
+        <input type="text" id="className" placeholder="输入教师姓名">
+        <button class="btn" id="myButton">确认</button>
+        <div id="teacherRateBar" style="width: 600px;height:400px;"></div>
+    </div>
+    <script th:inline="javascript">
+        const myInput = document.getElementById("className");
+        const myButton = document.getElementById("myButton");
+        var inputValue
+        var xmlDataList = [[${xmlDataList}]]
+        var classList = xmlDataList[0]
+        var studentList = xmlDataList[1]
+        var choiceList = xmlDataList[2]
+        var teacherList = xmlDataList[3]
+        function getCoursesByTeacher(teacher,arr) {
+            var infos = [];
+            // 遍历数据，找到所有该老师任教的课程
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].teacher == teacher) {
+                    infos.push({
+                        course: arr[i].course,
+                        achievement: arr[i].achievement,
+                        teaching: arr[i].teaching,
+                        attendence: arr[i].attendence,
+                        virtue: arr[i].virtue
+                    });
                 }
-            ]
-        };
-        teacherRateBar.setOption(optionTeacherRateBar);
-    })
-</script>
+            }
+            return infos;
+        }
+        myButton.addEventListener("click", function() {
+            inputValue = myInput.value;
+            var teacherName = inputValue;
+            var infos = getCoursesByTeacher(teacherName,teacherList)
+            var teacherRateBar = echarts.init(document.getElementById('teacherRateBar'));
+            var optionTeacherRateBar = {
+                title: {
+                    text: '教师评价信息'
+                },
+                tooltip: {},
+                legend: {
+                    data: ['出勤情况', '师德表现', '教学教研', '工作成绩']
+                },
+                grid: {
+                    containLabel: true
+                },
+                xAxis: {},
+                yAxis: {
+                    data: infos.map(obj => obj.course)
+                },
+                series: [
+                    {
+                        name: '出勤情况',
+                        type: 'bar',
+                        data: infos.map(obj => obj.attendence)
+                    },
+                    {
+                        name: '师德表现',
+                        type: 'bar',
+                        data: infos.map(obj => obj.virtue)
+                    },
+                    {
+                        name: '教学教研',
+                        type: 'bar',
+                        data: infos.map(obj => obj.teaching)
+                    },
+                    {
+                        name: '工作成绩',
+                        type: 'bar',
+                        data: infos.map(obj => obj.achievement)
+                    }
+                ]
+            };
+            teacherRateBar.setOption(optionTeacherRateBar);
+        })
+    </script>
 </body>
 </html>

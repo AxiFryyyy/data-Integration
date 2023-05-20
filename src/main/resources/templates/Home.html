@@ -13,7 +13,11 @@
         <button class="btn" id="collectionA" onclick=collect("A")>collectionA</button>
         <button class="btn" id="collectionB" onclick=collect("B")>collectionB</button>
         <button class="btn" id="collectionC" onclick=collect("C")>collectionC</button>
-        <button class="btn" id="showTable" onclick="window.location.href='http://localhost:8080/Home/table'">showTable</button>
+        <button class="btn" id="查看数据" onclick="window.location.href='http://localhost:9090/Home/table'">showTable</button>
+    </div>
+    <div class="button-container">
+        <button class="btn" id="课程图表" onclick="window.location.href='http://localhost:9090/Home/classChart'">课程图表</button>
+        <button class="btn" id="教师图表" onclick="window.location.href='http://localhost:9090/Home/teacherChart'">教师图表</button>
     </div>
     <div class="log-container">
         <textarea id="log" th:text="${output}"></textarea>
